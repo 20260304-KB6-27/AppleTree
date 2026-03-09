@@ -54,20 +54,20 @@ function updateUI() {
   const exp = getExp();
   const expNeeded = getExpPerLevel(level);
 
-  /* progress */
-  const percent = Math.min((exp / expNeeded) * 100, 100);
-  progress.style.width = percent + '%';
-
   /* level 표시 */
   levelText.textContent = `LEVEL ${level}`;
 
-  /* exp 표시 */
-  expText.textContent = `${Math.min(exp, expNeeded)} / ${expNeeded}`;
-
-  /* LEVEL UP 버튼 조건 */
   if (level >= MAX_LEVEL) {
+    progress.style.width = '100%';
+
+    expText.textContent = `${exp} EXP`;
+
     levelBtn.disabled = true;
   } else {
+    const percent = Math.min((exp / expNeeded) * 100, 100);
+    progress.style.width = percent + '%';
+
+    expText.textContent = `${Math.min(exp, expNeeded)} / ${expNeeded}`;
     levelBtn.disabled = exp < expNeeded;
   }
 
