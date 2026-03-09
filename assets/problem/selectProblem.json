@@ -1,0 +1,946 @@
+[
+  {
+    "id": 1,
+    "type": "multiple_choice",
+    "category": "HTML",
+    "question": "HTML 문서의 최상위 루트 태그는 무엇인가?",
+    "options": ["<root>", "<html>", "<body>", "<document>"],
+    "answer": 2,
+    "explanation": "HTML 문서는 반드시 <html> 태그로 시작하며 이 태그는 전체 문서 구조를 감싸는 루트 요소이다. 브라우저는 html 태그 내부의 구조를 기준으로 문서를 파싱하고 화면을 구성한다. head와 body 같은 주요 요소도 모두 html 태그 내부에 위치해야 한다."
+  },
+  {
+    "id": 2,
+    "type": "multiple_choice",
+    "category": "HTML",
+    "question": "브라우저 탭에 표시되는 페이지 제목을 정의하는 태그는 무엇인가?",
+    "options": ["<meta>", "<title>", "<header>", "<caption>"],
+    "answer": 2,
+    "explanation": "<title> 태그는 브라우저 탭에 표시되는 페이지 제목을 정의한다. 이 태그는 반드시 head 태그 내부에 위치해야 하며 검색 엔진이 페이지를 식별하는 데도 사용된다. 따라서 웹 페이지의 SEO와 사용자 식별 측면에서도 중요한 요소이다."
+  },
+  {
+    "id": 3,
+    "type": "multiple_choice",
+    "category": "HTML",
+    "question": "HTML에서 이미지를 삽입할 때 사용하는 태그는 무엇인가?",
+    "options": ["<img>", "<image>", "<src>", "<picture>"],
+    "answer": 1,
+    "explanation": "이미지를 삽입할 때는 <img> 태그를 사용한다. 이 태그는 src 속성을 통해 이미지 파일의 경로를 지정하며 alt 속성을 통해 대체 텍스트를 제공할 수 있다. alt 속성은 접근성과 SEO 측면에서도 중요한 역할을 한다."
+  },
+  {
+    "id": 4,
+    "type": "multiple_choice",
+    "category": "HTML",
+    "question": "HTML에서 줄바꿈을 수행하는 태그는 무엇인가?",
+    "options": ["<p>", "<hr>", "<br>", "<span>"],
+    "answer": 3,
+    "explanation": "<br> 태그는 텍스트에서 줄바꿈을 강제로 수행할 때 사용한다. 이 태그는 닫는 태그가 없는 빈 태그(empty element)이다. 문단을 구분하는 <p> 태그와 달리 단순한 줄바꿈만 수행한다."
+  },
+  {
+    "id": 5,
+    "type": "multiple_choice",
+    "category": "HTML",
+    "question": "하이퍼링크를 생성하는 HTML 태그는 무엇인가?",
+    "options": ["<url>", "<a>", "<link>", "<href>"],
+    "answer": 2,
+    "explanation": "<a> 태그는 하이퍼링크를 생성할 때 사용한다. href 속성을 이용해 이동할 URL을 지정할 수 있다. 사용자는 이 링크를 클릭하여 다른 페이지나 동일 페이지 내 특정 위치로 이동할 수 있다."
+  },
+
+  {
+    "id": 6,
+    "type": "multiple_choice",
+    "category": "CSS",
+    "question": "CSS에서 텍스트 색상을 지정하는 속성은 무엇인가?",
+    "options": ["font-color", "color", "text-color", "font-style"],
+    "answer": 2,
+    "explanation": "텍스트 색상은 CSS의 color 속성을 사용하여 지정한다. 색상은 이름, HEX 코드, RGB, RGBA 등 다양한 방식으로 표현할 수 있다. 웹 디자인에서 가독성과 시각적 강조를 위해 매우 중요한 속성이다."
+  },
+  {
+    "id": 7,
+    "type": "multiple_choice",
+    "category": "CSS",
+    "question": "요소의 외부 여백을 지정하는 CSS 속성은 무엇인가?",
+    "options": ["padding", "margin", "border", "spacing"],
+    "answer": 2,
+    "explanation": "margin은 요소의 바깥쪽 여백을 지정하는 속성이다. padding은 요소 내부의 여백을 의미하므로 두 속성은 서로 다른 역할을 한다. margin을 사용하면 요소 간 간격을 조정할 수 있다."
+  },
+  {
+    "id": 8,
+    "type": "multiple_choice",
+    "category": "CSS",
+    "question": "CSS 클래스 선택자를 나타내는 기호는 무엇인가?",
+    "options": ["#", ".", "*", "@"],
+    "answer": 2,
+    "explanation": "CSS에서 클래스 선택자는 점(.) 기호를 사용하여 지정한다. 예를 들어 .menu와 같은 방식으로 사용할 수 있다. 하나의 클래스는 여러 HTML 요소에 동시에 적용할 수 있다."
+  },
+  {
+    "id": 9,
+    "type": "multiple_choice",
+    "category": "CSS",
+    "question": "CSS에서 내부 여백을 지정하는 속성은 무엇인가?",
+    "options": ["margin", "padding", "border", "spacing"],
+    "answer": 2,
+    "explanation": "padding은 요소 내부의 여백을 지정하는 속성이다. 콘텐츠와 테두리 사이의 공간을 조정할 수 있다. margin과 함께 박스 모델(Box Model)의 핵심 요소이다."
+  },
+  {
+    "id": 10,
+    "type": "multiple_choice",
+    "category": "CSS",
+    "question": "CSS에서 Flexbox 레이아웃을 활성화하는 속성은 무엇인가?",
+    "options": ["layout:flex", "display:flex", "flex:on", "flex:true"],
+    "answer": 2,
+    "explanation": "Flexbox를 사용하려면 컨테이너 요소에 display:flex를 설정해야 한다. 그러면 내부 요소들이 flex 아이템으로 동작하게 된다. Flexbox는 요소 정렬과 배치에 매우 유용한 레이아웃 시스템이다."
+  },
+
+  {
+    "id": 11,
+    "type": "multiple_choice",
+    "category": "JavaScript",
+    "question": "JavaScript에서 변수 선언 키워드가 아닌 것은 무엇인가?",
+    "options": ["var", "let", "const", "int"],
+    "answer": 4,
+    "explanation": "JavaScript에서는 var, let, const 키워드를 사용하여 변수를 선언한다. int와 같은 타입 선언 키워드는 존재하지 않는다. JavaScript는 동적 타입 언어이기 때문에 변수 선언 시 타입을 명시하지 않는다."
+  },
+  {
+    "id": 12,
+    "type": "multiple_choice",
+    "category": "JavaScript",
+    "question": "브라우저 콘솔에 값을 출력하는 JavaScript 함수는 무엇인가?",
+    "options": ["print()", "console.log()", "log()", "write()"],
+    "answer": 2,
+    "explanation": "console.log() 함수는 브라우저 개발자 도구 콘솔에 값을 출력하는 데 사용된다. 개발자가 프로그램 동작을 확인하거나 디버깅할 때 자주 사용한다. Node.js 환경에서도 동일하게 사용할 수 있다."
+  },
+  {
+    "id": 13,
+    "type": "multiple_choice",
+    "category": "JavaScript",
+    "question": "JavaScript 배열의 길이를 반환하는 속성은 무엇인가?",
+    "options": ["size", "length", "count", "index"],
+    "answer": 2,
+    "explanation": "배열의 요소 개수는 length 속성을 통해 확인할 수 있다. 예를 들어 arr.length는 배열에 포함된 요소 수를 반환한다. 이 속성은 문자열 길이를 구할 때도 동일하게 사용된다."
+  },
+  {
+    "id": 14,
+    "type": "multiple_choice",
+    "category": "JavaScript",
+    "question": "조건문을 작성할 때 사용하는 JavaScript 키워드는 무엇인가?",
+    "options": ["if", "loop", "case", "when"],
+    "answer": 1,
+    "explanation": "if 문은 조건이 참일 때 특정 코드 블록을 실행하는 조건문이다. else나 else if와 함께 사용하면 다양한 조건 분기를 만들 수 있다. JavaScript 프로그램 흐름 제어의 기본 구조이다."
+  },
+  {
+    "id": 15,
+    "type": "multiple_choice",
+    "category": "JavaScript",
+    "question": "JavaScript에서 함수를 선언하는 키워드는 무엇인가?",
+    "options": ["method", "function", "define", "func"],
+    "answer": 2,
+    "explanation": "function 키워드는 JavaScript에서 함수를 선언할 때 사용된다. 함수는 특정 작업을 수행하는 코드 블록을 의미한다. 재사용 가능한 코드 구조를 만들 때 매우 중요하다."
+  },
+
+  {
+    "id": 16,
+    "type": "multiple_choice",
+    "category": "HTML",
+    "question": "순서가 있는 목록을 생성하는 HTML 태그는 무엇인가?",
+    "options": ["<ul>", "<ol>", "<li>", "<dl>"],
+    "answer": 2,
+    "explanation": "<ol> 태그는 ordered list를 의미하며 번호가 있는 목록을 생성한다. 각 목록 항목은 <li> 태그로 정의된다. 단계별 설명이나 순서가 필요한 콘텐츠에서 자주 사용된다."
+  },
+  {
+    "id": 17,
+    "type": "multiple_choice",
+    "category": "HTML",
+    "question": "순서가 없는 목록을 생성하는 HTML 태그는 무엇인가?",
+    "options": ["<ul>", "<ol>", "<li>", "<dl>"],
+    "answer": 1,
+    "explanation": "<ul> 태그는 unordered list로 번호 대신 점 형태의 목록을 만든다. 메뉴나 일반적인 리스트 표현에 자주 사용된다. 내부 항목은 <li> 태그로 구성된다."
+  },
+  {
+    "id": 18,
+    "type": "multiple_choice",
+    "category": "HTML",
+    "question": "목록 항목을 나타내는 HTML 태그는 무엇인가?",
+    "options": ["<item>", "<li>", "<ul>", "<ol>"],
+    "answer": 2,
+    "explanation": "<li> 태그는 list item을 의미하며 목록의 개별 항목을 나타낸다. 이 태그는 ul 또는 ol 태그 내부에서 사용된다. 하나의 리스트는 여러 개의 li 태그로 구성된다."
+  },
+
+  {
+    "id": 19,
+    "type": "multiple_choice",
+    "category": "CSS",
+    "question": "CSS에서 글자의 굵기를 지정하는 속성은 무엇인가?",
+    "options": ["font-weight", "text-bold", "weight", "font-style"],
+    "answer": 1,
+    "explanation": "font-weight 속성은 텍스트의 굵기를 지정한다. normal, bold, 또는 숫자 값(100~900)으로 설정할 수 있다. 시각적 강조를 표현할 때 자주 사용된다."
+  },
+  {
+    "id": 20,
+    "type": "multiple_choice",
+    "category": "CSS",
+    "question": "CSS에서 배경 색상을 지정하는 속성은 무엇인가?",
+    "options": ["background-color", "color", "bg", "background-style"],
+    "answer": 1,
+    "explanation": "background-color 속성은 요소의 배경 색상을 설정한다. 다양한 색상 표현 방식(HEX, RGB 등)을 사용할 수 있다. 텍스트 color 속성과는 구분된다."
+  },
+  {
+    "id": 21,
+    "type": "multiple_choice",
+    "category": "CSS",
+    "question": "CSS에서 텍스트 정렬을 지정하는 속성은 무엇인가?",
+    "options": ["font-align", "text-align", "align-text", "content-align"],
+    "answer": 2,
+    "explanation": "text-align 속성은 요소 내부 텍스트의 수평 정렬을 지정한다. left, center, right, justify 등의 값을 사용할 수 있다. 문단이나 제목을 중앙 정렬할 때 자주 사용되는 속성이다."
+  },
+  {
+    "id": 22,
+    "type": "multiple_choice",
+    "category": "CSS",
+    "question": "CSS에서 요소를 완전히 숨기는 방법은 무엇인가?",
+    "options": [
+      "visibility:hidden",
+      "display:none",
+      "opacity:0",
+      "hidden:true"
+    ],
+    "answer": 2,
+    "explanation": "display:none은 요소를 화면에서 완전히 제거하여 레이아웃에도 영향을 주지 않는다. 반면 visibility:hidden은 공간은 유지한 채 보이지 않게 만든다. 따라서 레이아웃 자체에서 제거하려면 display:none을 사용한다."
+  },
+  {
+    "id": 23,
+    "type": "multiple_choice",
+    "category": "CSS",
+    "question": "CSS에서 요소의 위치 기준을 설정하는 속성은 무엇인가?",
+    "options": ["align", "position", "layout", "display"],
+    "answer": 2,
+    "explanation": "position 속성은 요소의 배치 기준을 설정한다. static, relative, absolute, fixed, sticky 등의 값을 사용할 수 있다. 이 속성은 웹 레이아웃 설계에서 매우 중요한 역할을 한다."
+  },
+  {
+    "id": 24,
+    "type": "multiple_choice",
+    "category": "CSS",
+    "question": "요소를 왼쪽이나 오른쪽으로 띄우는 CSS 속성은 무엇인가?",
+    "options": ["float", "align", "display", "position"],
+    "answer": 1,
+    "explanation": "float 속성은 요소를 왼쪽 또는 오른쪽으로 배치할 때 사용된다. 과거 레이아웃 구현에 많이 사용되었지만 최근에는 flexbox나 grid가 더 많이 사용된다."
+  },
+  {
+    "id": 25,
+    "type": "multiple_choice",
+    "category": "CSS",
+    "question": "CSS에서 요소의 테두리를 지정하는 속성은 무엇인가?",
+    "options": ["outline", "border", "frame", "edge"],
+    "answer": 2,
+    "explanation": "border 속성은 요소의 테두리를 설정하는 데 사용된다. 두께, 스타일, 색상을 함께 지정할 수 있다. 예를 들어 border:1px solid black 형태로 작성할 수 있다."
+  },
+  {
+    "id": 26,
+    "type": "multiple_choice",
+    "category": "CSS",
+    "question": "CSS에서 요소의 투명도를 지정하는 속성은 무엇인가?",
+    "options": ["alpha", "opacity", "visibility", "transparent"],
+    "answer": 2,
+    "explanation": "opacity 속성은 요소의 투명도를 지정한다. 값은 0부터 1 사이로 설정하며 0은 완전 투명, 1은 완전 불투명이다. 애니메이션 효과에서도 자주 사용된다."
+  },
+  {
+    "id": 27,
+    "type": "multiple_choice",
+    "category": "CSS",
+    "question": "Flexbox에서 주축 방향을 지정하는 속성은 무엇인가?",
+    "options": ["flex-direction", "flex-axis", "flex-align", "flex-layout"],
+    "answer": 1,
+    "explanation": "flex-direction은 flexbox에서 아이템 배치 방향을 결정한다. row, column, row-reverse, column-reverse 등의 값을 사용할 수 있다."
+  },
+  {
+    "id": 28,
+    "type": "multiple_choice",
+    "category": "CSS",
+    "question": "Flexbox에서 아이템 간 간격을 지정하는 속성은 무엇인가?",
+    "options": ["space", "gap", "margin-gap", "flex-gap"],
+    "answer": 2,
+    "explanation": "gap 속성은 flexbox나 grid 레이아웃에서 아이템 사이의 간격을 지정할 때 사용한다. margin을 개별적으로 지정하는 것보다 편리하다."
+  },
+  {
+    "id": 29,
+    "type": "multiple_choice",
+    "category": "CSS",
+    "question": "CSS Grid 레이아웃을 활성화하는 속성은 무엇인가?",
+    "options": ["display:grid", "layout:grid", "grid:display", "grid-layout"],
+    "answer": 1,
+    "explanation": "display:grid를 설정하면 해당 요소가 grid 컨테이너가 된다. 내부 요소들은 grid 아이템으로 배치된다."
+  },
+  {
+    "id": 30,
+    "type": "multiple_choice",
+    "category": "CSS",
+    "question": "요소가 넘칠 때 처리 방식을 지정하는 CSS 속성은 무엇인가?",
+    "options": ["overflow", "wrap", "flow", "limit"],
+    "answer": 1,
+    "explanation": "overflow 속성은 콘텐츠가 컨테이너 영역을 초과할 때 어떻게 처리할지 결정한다. hidden, scroll, auto 등의 값을 사용할 수 있다."
+  },
+
+  {
+    "id": 31,
+    "type": "multiple_choice",
+    "category": "JavaScript",
+    "question": "JavaScript에서 배열의 마지막 요소를 제거하는 메서드는 무엇인가?",
+    "options": ["shift()", "pop()", "remove()", "delete()"],
+    "answer": 2,
+    "explanation": "pop() 메서드는 배열의 마지막 요소를 제거하고 해당 값을 반환한다. 배열 데이터를 스택 구조처럼 사용할 때 자주 사용된다."
+  },
+  {
+    "id": 32,
+    "type": "multiple_choice",
+    "category": "JavaScript",
+    "question": "배열의 끝에 요소를 추가하는 메서드는 무엇인가?",
+    "options": ["push()", "append()", "insert()", "add()"],
+    "answer": 1,
+    "explanation": "push() 메서드는 배열의 마지막에 새로운 요소를 추가한다. 여러 개의 요소를 동시에 추가할 수도 있다."
+  },
+  {
+    "id": 33,
+    "type": "multiple_choice",
+    "category": "JavaScript",
+    "question": "배열의 첫 번째 요소를 제거하는 메서드는 무엇인가?",
+    "options": ["shift()", "pop()", "delete()", "remove()"],
+    "answer": 1,
+    "explanation": "shift() 메서드는 배열의 첫 번째 요소를 제거하고 반환한다. 배열의 모든 요소 인덱스가 하나씩 앞으로 이동한다."
+  },
+  {
+    "id": 34,
+    "type": "multiple_choice",
+    "category": "JavaScript",
+    "question": "배열의 앞에 요소를 추가하는 메서드는 무엇인가?",
+    "options": ["push()", "unshift()", "addFirst()", "prepend()"],
+    "answer": 2,
+    "explanation": "unshift() 메서드는 배열의 앞부분에 새로운 요소를 추가한다. 기존 요소들은 뒤로 이동한다."
+  },
+  {
+    "id": 35,
+    "type": "multiple_choice",
+    "category": "JavaScript",
+    "question": "JSON 문자열을 JavaScript 객체로 변환하는 함수는 무엇인가?",
+    "options": [
+      "JSON.parse()",
+      "JSON.stringify()",
+      "JSON.convert()",
+      "JSON.object()"
+    ],
+    "answer": 1,
+    "explanation": "JSON.parse()는 JSON 문자열을 JavaScript 객체로 변환한다. API 응답 데이터를 처리할 때 자주 사용된다."
+  },
+  {
+    "id": 36,
+    "type": "multiple_choice",
+    "category": "JavaScript",
+    "question": "JavaScript 객체를 JSON 문자열로 변환하는 함수는 무엇인가?",
+    "options": [
+      "JSON.stringify()",
+      "JSON.parse()",
+      "JSON.encode()",
+      "JSON.objectify()"
+    ],
+    "answer": 1,
+    "explanation": "JSON.stringify()는 JavaScript 객체를 JSON 형식 문자열로 변환한다. 서버 전송이나 저장 시 사용된다."
+  },
+  {
+    "id": 37,
+    "type": "multiple_choice",
+    "category": "JavaScript",
+    "question": "JavaScript에서 데이터 타입을 확인하는 연산자는 무엇인가?",
+    "options": ["typeof", "type", "check", "instance"],
+    "answer": 1,
+    "explanation": "typeof 연산자는 변수의 데이터 타입을 문자열 형태로 반환한다. 예를 들어 typeof 10은 number를 반환한다."
+  },
+  {
+    "id": 38,
+    "type": "multiple_choice",
+    "category": "JavaScript",
+    "question": "JavaScript에서 엄격한 비교 연산자는 무엇인가?",
+    "options": ["==", "===", "!=", "!=="],
+    "answer": 2,
+    "explanation": "=== 연산자는 값뿐만 아니라 타입까지 동일한지 비교한다. == 연산자보다 더 정확한 비교를 수행한다."
+  },
+  {
+    "id": 39,
+    "type": "multiple_choice",
+    "category": "JavaScript",
+    "question": "난수를 생성하는 JavaScript 함수는 무엇인가?",
+    "options": [
+      "Math.random()",
+      "Math.number()",
+      "Math.rand()",
+      "Math.create()"
+    ],
+    "answer": 1,
+    "explanation": "Math.random()은 0 이상 1 미만의 난수를 생성한다. 게임 로직이나 랜덤 데이터 생성에 사용된다."
+  },
+  {
+    "id": 40,
+    "type": "multiple_choice",
+    "category": "JavaScript",
+    "question": "숫자를 내림 처리하는 JavaScript 함수는 무엇인가?",
+    "options": ["Math.floor()", "Math.ceil()", "Math.round()", "Math.down()"],
+    "answer": 1,
+    "explanation": "Math.floor()는 소수점 이하를 버리고 가장 가까운 정수로 내림 처리한다. 랜덤 정수 생성에서 자주 사용된다."
+  },
+
+  {
+    "id": 41,
+    "type": "multiple_choice",
+    "category": "JavaScript",
+    "question": "숫자를 올림 처리하는 함수는 무엇인가?",
+    "options": ["Math.ceil()", "Math.floor()", "Math.round()", "Math.up()"],
+    "answer": 1,
+    "explanation": "Math.ceil()은 소수점을 올림하여 가장 가까운 정수를 반환한다."
+  },
+  {
+    "id": 42,
+    "type": "multiple_choice",
+    "category": "JavaScript",
+    "question": "소수점 반올림 함수는 무엇인가?",
+    "options": ["Math.round()", "Math.ceil()", "Math.floor()", "Math.fix()"],
+    "answer": 1,
+    "explanation": "Math.round()는 소수점 첫째 자리 기준으로 반올림한다."
+  },
+  {
+    "id": 43,
+    "type": "multiple_choice",
+    "category": "JavaScript",
+    "question": "일정 시간 후 함수를 실행하는 함수는 무엇인가?",
+    "options": ["setTimeout()", "setInterval()", "delay()", "timer()"],
+    "answer": 1,
+    "explanation": "setTimeout()은 지정된 시간이 지난 후 한 번 실행된다."
+  },
+  {
+    "id": 44,
+    "type": "multiple_choice",
+    "category": "JavaScript",
+    "question": "일정 시간 간격으로 반복 실행하는 함수는 무엇인가?",
+    "options": ["setInterval()", "setTimeout()", "loop()", "timer()"],
+    "answer": 1,
+    "explanation": "setInterval()은 지정된 시간 간격마다 반복 실행된다."
+  },
+  {
+    "id": 45,
+    "type": "multiple_choice",
+    "category": "JavaScript",
+    "question": "브라우저 경고창을 표시하는 함수는 무엇인가?",
+    "options": ["alert()", "warning()", "message()", "popup()"],
+    "answer": 1,
+    "explanation": "alert() 함수는 브라우저에서 경고 메시지 창을 표시한다."
+  },
+  {
+    "id": 46,
+    "type": "multiple_choice",
+    "category": "HTML",
+    "question": "HTML에서 블록 레벨 컨테이너로 가장 많이 사용되는 태그는 무엇인가?",
+    "options": ["<span>", "<div>", "<inline>", "<container>"],
+    "answer": 2,
+    "explanation": "div 태그는 HTML에서 가장 일반적인 블록 레벨 컨테이너이다. 여러 요소를 묶어 레이아웃을 구성할 때 사용된다. CSS와 함께 사용하여 페이지 구조를 구성하는 데 매우 중요한 역할을 한다."
+  },
+  {
+    "id": 47,
+    "type": "multiple_choice",
+    "category": "HTML",
+    "question": "HTML에서 인라인 요소를 묶는 태그는 무엇인가?",
+    "options": ["<div>", "<span>", "<section>", "<block>"],
+    "answer": 2,
+    "explanation": "span 태그는 인라인 요소를 묶기 위해 사용된다. 텍스트의 일부 영역에 스타일을 적용할 때 많이 사용된다. div와 달리 줄바꿈이 발생하지 않는 인라인 요소이다."
+  },
+  {
+    "id": 48,
+    "type": "multiple_choice",
+    "category": "HTML",
+    "question": "HTML5에서 문서의 주요 콘텐츠 영역을 의미하는 태그는 무엇인가?",
+    "options": ["<content>", "<main>", "<section>", "<body>"],
+    "answer": 2,
+    "explanation": "main 태그는 문서의 핵심 콘텐츠를 나타내는 시맨틱 태그이다. 페이지의 주요 내용을 명확하게 구분하기 위해 사용된다. 검색 엔진과 접근성 측면에서도 중요하다."
+  },
+  {
+    "id": 49,
+    "type": "multiple_choice",
+    "category": "HTML",
+    "question": "웹 페이지의 머리말 영역을 나타내는 태그는 무엇인가?",
+    "options": ["<top>", "<header>", "<headbar>", "<titlebar>"],
+    "answer": 2,
+    "explanation": "header 태그는 페이지나 섹션의 머리말 영역을 의미한다. 로고, 제목, 메뉴 등이 포함되는 경우가 많다."
+  },
+  {
+    "id": 50,
+    "type": "multiple_choice",
+    "category": "HTML",
+    "question": "웹 페이지의 하단 영역을 나타내는 태그는 무엇인가?",
+    "options": ["<bottom>", "<footer>", "<end>", "<tail>"],
+    "answer": 2,
+    "explanation": "footer 태그는 문서나 섹션의 하단 정보를 포함한다. 저작권 정보나 연락처 등이 포함되는 경우가 많다."
+  },
+
+  {
+    "id": 51,
+    "type": "multiple_choice",
+    "category": "CSS",
+    "question": "CSS에서 요소의 너비를 지정하는 속성은 무엇인가?",
+    "options": ["width", "height", "size", "length"],
+    "answer": 1,
+    "explanation": "width 속성은 요소의 가로 크기를 지정한다. px, %, vw 등 다양한 단위를 사용할 수 있다."
+  },
+  {
+    "id": 52,
+    "type": "multiple_choice",
+    "category": "CSS",
+    "question": "CSS에서 요소의 높이를 지정하는 속성은 무엇인가?",
+    "options": ["height", "width", "size", "length"],
+    "answer": 1,
+    "explanation": "height 속성은 요소의 세로 크기를 지정한다. 레이아웃 구성에서 width와 함께 자주 사용된다."
+  },
+  {
+    "id": 53,
+    "type": "multiple_choice",
+    "category": "CSS",
+    "question": "CSS에서 요소의 최대 너비를 지정하는 속성은 무엇인가?",
+    "options": ["max-width", "limit-width", "width-max", "top-width"],
+    "answer": 1,
+    "explanation": "max-width는 요소가 가질 수 있는 최대 너비를 제한한다. 반응형 웹 디자인에서 자주 사용된다."
+  },
+  {
+    "id": 54,
+    "type": "multiple_choice",
+    "category": "CSS",
+    "question": "CSS에서 줄 간격을 지정하는 속성은 무엇인가?",
+    "options": ["text-space", "line-height", "font-space", "row-gap"],
+    "answer": 2,
+    "explanation": "line-height는 텍스트 줄 사이 간격을 조정한다. 가독성을 높이는 데 중요한 속성이다."
+  },
+  {
+    "id": 55,
+    "type": "multiple_choice",
+    "category": "CSS",
+    "question": "CSS에서 글꼴을 지정하는 속성은 무엇인가?",
+    "options": ["font-style", "font-family", "font-type", "font-name"],
+    "answer": 2,
+    "explanation": "font-family는 텍스트에 사용할 글꼴을 지정한다. 여러 폰트를 순서대로 지정할 수도 있다."
+  },
+
+  {
+    "id": 56,
+    "type": "multiple_choice",
+    "category": "JavaScript",
+    "question": "JavaScript에서 배열인지 확인하는 함수는 무엇인가?",
+    "options": ["Array.isArray()", "isArray()", "checkArray()", "arrayCheck()"],
+    "answer": 1,
+    "explanation": "Array.isArray()는 특정 값이 배열인지 확인하는 메서드이다. true 또는 false를 반환한다."
+  },
+  {
+    "id": 57,
+    "type": "multiple_choice",
+    "category": "JavaScript",
+    "question": "JavaScript에서 문자열 길이를 구하는 속성은 무엇인가?",
+    "options": ["size", "count", "length", "char"],
+    "answer": 3,
+    "explanation": "length 속성은 문자열에 포함된 문자 수를 반환한다. 배열에서도 동일하게 사용된다."
+  },
+  {
+    "id": 58,
+    "type": "multiple_choice",
+    "category": "JavaScript",
+    "question": "JavaScript에서 정의되지 않은 값을 의미하는 것은 무엇인가?",
+    "options": ["null", "undefined", "NaN", "empty"],
+    "answer": 2,
+    "explanation": "undefined는 값이 아직 정의되지 않았음을 의미한다. 변수 선언 후 값이 할당되지 않았을 때 나타난다."
+  },
+  {
+    "id": 59,
+    "type": "multiple_choice",
+    "category": "JavaScript",
+    "question": "JavaScript에서 숫자가 아님을 의미하는 값은 무엇인가?",
+    "options": ["NaN", "undefined", "null", "zero"],
+    "answer": 1,
+    "explanation": "NaN은 Not a Number의 약자로 숫자가 아닌 값을 의미한다. 숫자 계산에서 오류가 발생할 때 나타난다."
+  },
+  {
+    "id": 60,
+    "type": "multiple_choice",
+    "category": "JavaScript",
+    "question": "JavaScript에서 의도적으로 비어있는 값을 의미하는 것은 무엇인가?",
+    "options": ["undefined", "null", "empty", "none"],
+    "answer": 2,
+    "explanation": "null은 개발자가 의도적으로 비어있는 값을 지정할 때 사용한다. undefined와는 의미가 다르다."
+  },
+
+  {
+    "id": 61,
+    "type": "multiple_choice",
+    "category": "HTML",
+    "question": "HTML에서 비디오를 삽입하는 태그는 무엇인가?",
+    "options": ["<video>", "<movie>", "<media>", "<film>"],
+    "answer": 1,
+    "explanation": "video 태그는 HTML5에서 도입된 멀티미디어 태그이다. 웹 페이지에 영상을 삽입할 수 있다."
+  },
+  {
+    "id": 62,
+    "type": "multiple_choice",
+    "category": "HTML",
+    "question": "HTML에서 오디오를 삽입하는 태그는 무엇인가?",
+    "options": ["<sound>", "<audio>", "<music>", "<mp3>"],
+    "answer": 2,
+    "explanation": "audio 태그는 웹 페이지에서 음성 파일을 재생할 때 사용된다."
+  },
+  {
+    "id": 63,
+    "type": "multiple_choice",
+    "category": "HTML",
+    "question": "JavaScript 코드를 HTML 문서에 포함하는 태그는 무엇인가?",
+    "options": ["<script>", "<javascript>", "<js>", "<code>"],
+    "answer": 1,
+    "explanation": "script 태그는 JavaScript 코드를 작성하거나 외부 JS 파일을 불러올 때 사용된다."
+  },
+  {
+    "id": 64,
+    "type": "multiple_choice",
+    "category": "HTML",
+    "question": "외부 CSS 파일을 연결하는 태그는 무엇인가?",
+    "options": ["<link>", "<style>", "<css>", "<design>"],
+    "answer": 1,
+    "explanation": "link 태그는 외부 CSS 파일을 HTML 문서에 연결할 때 사용된다."
+  },
+  {
+    "id": 65,
+    "type": "multiple_choice",
+    "category": "HTML",
+    "question": "HTML 문서 내부에 CSS를 작성할 때 사용하는 태그는 무엇인가?",
+    "options": ["<css>", "<style>", "<script>", "<design>"],
+    "answer": 2,
+    "explanation": "style 태그 내부에 CSS 코드를 작성하면 해당 HTML 문서에 스타일이 적용된다."
+  },
+
+  {
+    "id": 66,
+    "type": "multiple_choice",
+    "category": "CSS",
+    "question": "텍스트 밑줄과 같은 장식을 지정하는 속성은 무엇인가?",
+    "options": [
+      "text-decoration",
+      "text-style",
+      "font-decoration",
+      "text-format"
+    ],
+    "answer": 1,
+    "explanation": "text-decoration은 밑줄, 취소선 등 텍스트 장식을 설정하는 속성이다."
+  },
+  {
+    "id": 67,
+    "type": "multiple_choice",
+    "category": "CSS",
+    "question": "마우스 커서 모양을 지정하는 속성은 무엇인가?",
+    "options": ["cursor", "pointer", "mouse", "style-cursor"],
+    "answer": 1,
+    "explanation": "cursor 속성은 마우스 포인터 모양을 변경한다."
+  },
+  {
+    "id": 68,
+    "type": "multiple_choice",
+    "category": "CSS",
+    "question": "요소에 그림자 효과를 주는 속성은 무엇인가?",
+    "options": ["box-shadow", "shadow", "element-shadow", "border-shadow"],
+    "answer": 1,
+    "explanation": "box-shadow는 요소에 그림자 효과를 추가하는 CSS 속성이다."
+  },
+  {
+    "id": 69,
+    "type": "multiple_choice",
+    "category": "CSS",
+    "question": "요소의 모서리를 둥글게 만드는 속성은 무엇인가?",
+    "options": ["corner-radius", "border-round", "border-radius", "round-edge"],
+    "answer": 3,
+    "explanation": "border-radius는 요소 모서리를 둥글게 만든다."
+  },
+  {
+    "id": 70,
+    "type": "multiple_choice",
+    "category": "CSS",
+    "question": "요소의 쌓임 순서를 지정하는 속성은 무엇인가?",
+    "options": ["stack", "layer", "z-index", "order"],
+    "answer": 3,
+    "explanation": "z-index는 요소가 겹칠 때 어떤 것이 위에 표시될지 결정한다."
+  },
+
+  {
+    "id": 71,
+    "type": "multiple_choice",
+    "category": "JavaScript",
+    "question": "JSON의 의미는 무엇인가?",
+    "options": [
+      "JavaScript Object Notation",
+      "JavaScript Operation Network",
+      "Java System Object Node",
+      "Java Structured Output Name"
+    ],
+    "answer": 1,
+    "explanation": "JSON은 데이터를 저장하거나 전송할 때 사용하는 텍스트 기반 형식이다."
+  },
+  {
+    "id": 72,
+    "type": "multiple_choice",
+    "category": "JavaScript",
+    "question": "브라우저에서 사용자 입력을 받는 함수는 무엇인가?",
+    "options": ["prompt()", "input()", "read()", "ask()"],
+    "answer": 1,
+    "explanation": "prompt()는 사용자에게 입력창을 보여주고 값을 받을 수 있다."
+  },
+  {
+    "id": 73,
+    "type": "multiple_choice",
+    "category": "JavaScript",
+    "question": "현재 문서를 나타내는 객체는 무엇인가?",
+    "options": ["window", "document", "browser", "page"],
+    "answer": 2,
+    "explanation": "document 객체는 HTML 문서를 나타내며 DOM 접근에 사용된다."
+  },
+  {
+    "id": 74,
+    "type": "multiple_choice",
+    "category": "JavaScript",
+    "question": "현재 브라우저 창을 나타내는 객체는 무엇인가?",
+    "options": ["document", "window", "screen", "navigator"],
+    "answer": 2,
+    "explanation": "window 객체는 브라우저 창 자체를 나타낸다."
+  },
+  {
+    "id": 75,
+    "type": "multiple_choice",
+    "category": "JavaScript",
+    "question": "DOM 요소를 CSS 선택자로 찾는 메서드는 무엇인가?",
+    "options": ["querySelector()", "getNode()", "selectNode()", "getTag()"],
+    "answer": 1,
+    "explanation": "querySelector()는 CSS 선택자 방식으로 요소를 찾는다."
+  },
+
+  {
+    "id": 76,
+    "type": "multiple_choice",
+    "category": "HTML",
+    "question": "폼 입력 필드에 설명을 연결하는 태그는 무엇인가?",
+    "options": ["<label>", "<form>", "<text>", "<input>"],
+    "answer": 1,
+    "explanation": "label 태그는 입력 필드 설명을 제공한다."
+  },
+  {
+    "id": 77,
+    "type": "multiple_choice",
+    "category": "HTML",
+    "question": "클릭 가능한 버튼을 만드는 태그는 무엇인가?",
+    "options": ["<click>", "<button>", "<action>", "<submit>"],
+    "answer": 2,
+    "explanation": "button 태그는 클릭 이벤트를 처리하는 버튼을 만든다."
+  },
+  {
+    "id": 78,
+    "type": "multiple_choice",
+    "category": "HTML",
+    "question": "드롭다운 목록을 만드는 태그는 무엇인가?",
+    "options": ["<dropdown>", "<select>", "<optionlist>", "<list>"],
+    "answer": 2,
+    "explanation": "select 태그는 드롭다운 메뉴를 생성한다."
+  },
+  {
+    "id": 79,
+    "type": "multiple_choice",
+    "category": "HTML",
+    "question": "select 태그 내부에서 항목을 정의하는 태그는 무엇인가?",
+    "options": ["<item>", "<option>", "<choice>", "<element>"],
+    "answer": 2,
+    "explanation": "option 태그는 드롭다운 메뉴의 개별 항목을 정의한다."
+  },
+  {
+    "id": 80,
+    "type": "multiple_choice",
+    "category": "HTML",
+    "question": "다른 웹 페이지를 현재 페이지에 삽입하는 태그는 무엇인가?",
+    "options": ["<embed>", "<iframe>", "<frame>", "<object>"],
+    "answer": 2,
+    "explanation": "iframe 태그는 다른 웹 페이지를 현재 페이지 안에 표시할 수 있다."
+  },
+
+  {
+    "id": 81,
+    "type": "multiple_choice",
+    "category": "CSS",
+    "question": "요소를 화면에 고정시키는 position 값은 무엇인가?",
+    "options": ["fixed", "absolute", "relative", "static"],
+    "answer": 1,
+    "explanation": "position:fixed는 스크롤과 상관없이 화면에 고정된다."
+  },
+  {
+    "id": 82,
+    "type": "multiple_choice",
+    "category": "CSS",
+    "question": "요소를 부모 기준으로 절대 위치시키는 position 값은 무엇인가?",
+    "options": ["absolute", "fixed", "relative", "static"],
+    "answer": 1,
+    "explanation": "absolute는 가장 가까운 위치 지정 부모 기준으로 배치된다."
+  },
+  {
+    "id": 83,
+    "type": "multiple_choice",
+    "category": "CSS",
+    "question": "기본 위치 배치 방식은 무엇인가?",
+    "options": ["static", "absolute", "fixed", "relative"],
+    "answer": 1,
+    "explanation": "static은 기본 위치 배치 방식이다."
+  },
+  {
+    "id": 84,
+    "type": "multiple_choice",
+    "category": "CSS",
+    "question": "자기 위치 기준으로 이동하는 position 값은 무엇인가?",
+    "options": ["relative", "absolute", "fixed", "static"],
+    "answer": 1,
+    "explanation": "relative는 원래 위치 기준으로 이동한다."
+  },
+  {
+    "id": 85,
+    "type": "multiple_choice",
+    "category": "CSS",
+    "question": "텍스트를 굵게 만드는 속성 값은 무엇인가?",
+    "options": ["bold", "thick", "heavy", "strong"],
+    "answer": 1,
+    "explanation": "font-weight:bold는 텍스트를 굵게 만든다."
+  },
+  {
+    "id": 86,
+    "type": "multiple_choice",
+    "category": "JavaScript",
+    "question": "JavaScript에서 논리 AND 연산자는 무엇인가?",
+    "options": ["&&", "||", "!", "&"],
+    "answer": 1,
+    "explanation": "&&는 두 조건이 모두 참일 때 true를 반환한다."
+  },
+  {
+    "id": 87,
+    "type": "multiple_choice",
+    "category": "JavaScript",
+    "question": "JavaScript에서 논리 OR 연산자는 무엇인가?",
+    "options": ["||", "&&", "!", "|"],
+    "answer": 1,
+    "explanation": "||는 둘 중 하나라도 참이면 true를 반환한다."
+  },
+  {
+    "id": 88,
+    "type": "multiple_choice",
+    "category": "JavaScript",
+    "question": "JavaScript에서 논리 NOT 연산자는 무엇인가?",
+    "options": ["!", "not", "~", "-"],
+    "answer": 1,
+    "explanation": "! 연산자는 Boolean 값을 반전시킨다."
+  },
+  {
+    "id": 89,
+    "type": "multiple_choice",
+    "category": "JavaScript",
+    "question": "JavaScript에서 값과 타입 모두 비교하는 연산자는 무엇인가?",
+    "options": ["===", "==", "=", "!=="],
+    "answer": 1,
+    "explanation": "===는 값과 타입이 모두 동일한지 비교한다."
+  },
+  {
+    "id": 90,
+    "type": "multiple_choice",
+    "category": "JavaScript",
+    "question": "JavaScript에서 값만 비교하는 연산자는 무엇인가?",
+    "options": ["==", "===", "!=", "!=="],
+    "answer": 1,
+    "explanation": "==는 타입 변환 후 값을 비교한다."
+  },
+
+  {
+    "id": 91,
+    "type": "multiple_choice",
+    "category": "HTML",
+    "question": "HTML5에서 네비게이션 메뉴를 의미하는 태그는 무엇인가?",
+    "options": ["nav", "menu", "navigate", "link"],
+    "answer": 1,
+    "explanation": "nav 태그는 사이트의 메뉴나 네비게이션 영역을 나타낸다."
+  },
+  {
+    "id": 92,
+    "type": "multiple_choice",
+    "category": "HTML",
+    "question": "독립적인 콘텐츠 영역을 나타내는 태그는 무엇인가?",
+    "options": ["article", "section", "block", "content"],
+    "answer": 1,
+    "explanation": "article은 독립적인 콘텐츠 단위를 의미한다."
+  },
+  {
+    "id": 93,
+    "type": "multiple_choice",
+    "category": "HTML",
+    "question": "보조 콘텐츠 영역을 의미하는 태그는 무엇인가?",
+    "options": ["aside", "side", "extra", "sub"],
+    "answer": 1,
+    "explanation": "aside 태그는 보조 정보나 사이드바 영역을 나타낸다."
+  },
+  {
+    "id": 94,
+    "type": "multiple_choice",
+    "category": "HTML",
+    "question": "이미지와 설명을 함께 묶는 태그는 무엇인가?",
+    "options": ["figure", "img-group", "image-block", "media"],
+    "answer": 1,
+    "explanation": "figure 태그는 이미지와 캡션을 함께 묶는다."
+  },
+  {
+    "id": 95,
+    "type": "multiple_choice",
+    "category": "HTML",
+    "question": "figure 태그의 설명을 나타내는 태그는 무엇인가?",
+    "options": ["figcaption", "caption", "image-text", "label"],
+    "answer": 1,
+    "explanation": "figcaption은 figure의 설명을 제공한다."
+  },
+  {
+    "id": 96,
+    "type": "multiple_choice",
+    "category": "CSS",
+    "question": "display 속성 중 블록 요소를 만드는 값은 무엇인가?",
+    "options": ["block", "inline", "flex", "grid"],
+    "answer": 1,
+    "explanation": "display:block은 요소를 블록 레벨 요소로 만든다."
+  },
+  {
+    "id": 97,
+    "type": "multiple_choice",
+    "category": "CSS",
+    "question": "display 속성 중 인라인 요소를 만드는 값은 무엇인가?",
+    "options": ["inline", "block", "flex", "grid"],
+    "answer": 1,
+    "explanation": "display:inline은 줄바꿈 없이 표시된다."
+  },
+  {
+    "id": 98,
+    "type": "multiple_choice",
+    "category": "CSS",
+    "question": "display 속성 중 flex 레이아웃을 만드는 값은 무엇인가?",
+    "options": ["flex", "block", "inline", "grid"],
+    "answer": 1,
+    "explanation": "display:flex는 flexbox 레이아웃을 활성화한다."
+  },
+  {
+    "id": 99,
+    "type": "multiple_choice",
+    "category": "CSS",
+    "question": "display 속성 중 grid 레이아웃을 만드는 값은 무엇인가?",
+    "options": ["grid", "flex", "block", "inline"],
+    "answer": 1,
+    "explanation": "display:grid는 grid 레이아웃을 활성화한다."
+  },
+  {
+    "id": 100,
+    "type": "multiple_choice",
+    "category": "JavaScript",
+    "question": "브라우저에 메시지를 출력하는 함수는 무엇인가?",
+    "options": ["alert()", "console.log()", "prompt()", "print()"],
+    "answer": 1,
+    "explanation": "alert() 함수는 브라우저에서 메시지 창을 표시한다."
+  }
+]

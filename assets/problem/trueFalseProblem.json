@@ -1,0 +1,707 @@
+[
+  {
+    "id": 1,
+    "type": "ox",
+    "category": "HTML",
+    "question": "HTML 문서의 최상위 루트 요소는 <html> 태그이다.",
+    "answer": true
+  },
+  {
+    "id": 2,
+    "type": "ox",
+    "category": "HTML",
+    "question": "<title> 태그는 브라우저 탭에 표시되는 페이지 제목을 정의한다.",
+    "answer": true
+  },
+  {
+    "id": 3,
+    "type": "ox",
+    "category": "HTML",
+    "question": "HTML에서 이미지를 삽입할 때 <image> 태그를 사용한다.",
+    "answer": false
+  },
+  {
+    "id": 4,
+    "type": "ox",
+    "category": "HTML",
+    "question": "<br> 태그는 줄바꿈을 수행한다.",
+    "answer": true
+  },
+  {
+    "id": 5,
+    "type": "ox",
+    "category": "HTML",
+    "question": "<a> 태그는 하이퍼링크를 생성할 때 사용한다.",
+    "answer": true
+  },
+  {
+    "id": 6,
+    "type": "ox",
+    "category": "HTML",
+    "question": "<ul> 태그는 순서가 있는 목록을 만든다.",
+    "answer": false
+  },
+  {
+    "id": 7,
+    "type": "ox",
+    "category": "HTML",
+    "question": "<ol> 태그는 번호가 있는 목록을 만든다.",
+    "answer": true
+  },
+  {
+    "id": 8,
+    "type": "ox",
+    "category": "HTML",
+    "question": "<li> 태그는 리스트 항목을 나타낸다.",
+    "answer": true
+  },
+  {
+    "id": 9,
+    "type": "ox",
+    "category": "HTML",
+    "question": "<div> 태그는 대표적인 블록 레벨 요소이다.",
+    "answer": true
+  },
+  {
+    "id": 10,
+    "type": "ox",
+    "category": "HTML",
+    "question": "<span> 태그는 블록 레벨 요소이다.",
+    "answer": false
+  },
+  {
+    "id": 11,
+    "type": "ox",
+    "category": "HTML",
+    "question": "<header> 태그는 페이지의 머리말 영역을 의미한다.",
+    "answer": true
+  },
+  {
+    "id": 12,
+    "type": "ox",
+    "category": "HTML",
+    "question": "<footer> 태그는 페이지의 하단 영역을 나타낸다.",
+    "answer": true
+  },
+  {
+    "id": 13,
+    "type": "ox",
+    "category": "HTML",
+    "question": "<main> 태그는 문서의 주요 콘텐츠를 나타낸다.",
+    "answer": true
+  },
+  {
+    "id": 14,
+    "type": "ox",
+    "category": "HTML",
+    "question": "<aside> 태그는 보조 콘텐츠 영역을 나타낸다.",
+    "answer": true
+  },
+  {
+    "id": 15,
+    "type": "ox",
+    "category": "HTML",
+    "question": "<nav> 태그는 사이트의 네비게이션 영역을 나타낸다.",
+    "answer": true
+  },
+  {
+    "id": 16,
+    "type": "ox",
+    "category": "HTML",
+    "question": "<figure> 태그는 이미지나 코드 등의 독립 콘텐츠를 묶는다.",
+    "answer": true
+  },
+  {
+    "id": 17,
+    "type": "ox",
+    "category": "HTML",
+    "question": "<figcaption> 태그는 figure의 설명을 나타낸다.",
+    "answer": true
+  },
+  {
+    "id": 18,
+    "type": "ox",
+    "category": "HTML",
+    "question": "<iframe> 태그는 다른 웹 페이지를 현재 페이지에 삽입할 수 있다.",
+    "answer": true
+  },
+  {
+    "id": 19,
+    "type": "ox",
+    "category": "HTML",
+    "question": "<audio> 태그는 웹 페이지에서 영상 재생을 위해 사용된다.",
+    "answer": false
+  },
+  {
+    "id": 20,
+    "type": "ox",
+    "category": "HTML",
+    "question": "<video> 태그는 HTML5에서 도입된 영상 재생 태그이다.",
+    "answer": true
+  },
+
+  {
+    "id": 21,
+    "type": "ox",
+    "category": "CSS",
+    "question": "CSS에서 텍스트 색상을 지정하는 속성은 color이다.",
+    "answer": true
+  },
+  {
+    "id": 22,
+    "type": "ox",
+    "category": "CSS",
+    "question": "margin은 요소 내부 여백을 의미한다.",
+    "answer": false
+  },
+  {
+    "id": 23,
+    "type": "ox",
+    "category": "CSS",
+    "question": "padding은 요소 내부 여백을 지정한다.",
+    "answer": true
+  },
+  {
+    "id": 24,
+    "type": "ox",
+    "category": "CSS",
+    "question": "CSS 클래스 선택자는 # 기호를 사용한다.",
+    "answer": false
+  },
+  {
+    "id": 25,
+    "type": "ox",
+    "category": "CSS",
+    "question": "CSS ID 선택자는 # 기호를 사용한다.",
+    "answer": true
+  },
+  {
+    "id": 26,
+    "type": "ox",
+    "category": "CSS",
+    "question": "display:flex는 Flexbox 레이아웃을 활성화한다.",
+    "answer": true
+  },
+  {
+    "id": 27,
+    "type": "ox",
+    "category": "CSS",
+    "question": "display:grid는 Grid 레이아웃을 활성화한다.",
+    "answer": true
+  },
+  {
+    "id": 28,
+    "type": "ox",
+    "category": "CSS",
+    "question": "font-weight:bold는 글자를 굵게 만든다.",
+    "answer": true
+  },
+  {
+    "id": 29,
+    "type": "ox",
+    "category": "CSS",
+    "question": "background-color는 텍스트 색상을 지정한다.",
+    "answer": false
+  },
+  {
+    "id": 30,
+    "type": "ox",
+    "category": "CSS",
+    "question": "text-align 속성은 텍스트 정렬을 지정한다.",
+    "answer": true
+  },
+  {
+    "id": 31,
+    "type": "ox",
+    "category": "CSS",
+    "question": "border 속성은 요소의 테두리를 설정한다.",
+    "answer": true
+  },
+  {
+    "id": 32,
+    "type": "ox",
+    "category": "CSS",
+    "question": "opacity 값은 0에서 1 사이로 지정한다.",
+    "answer": true
+  },
+  {
+    "id": 33,
+    "type": "ox",
+    "category": "CSS",
+    "question": "z-index는 요소의 쌓임 순서를 결정한다.",
+    "answer": true
+  },
+  {
+    "id": 34,
+    "type": "ox",
+    "category": "CSS",
+    "question": "position:fixed는 스크롤에 따라 위치가 이동한다.",
+    "answer": false
+  },
+  {
+    "id": 35,
+    "type": "ox",
+    "category": "CSS",
+    "question": "position:absolute는 위치가 지정된 조상 요소를 기준으로 배치된다.",
+    "answer": true
+  },
+  {
+    "id": 36,
+    "type": "ox",
+    "category": "CSS",
+    "question": "position:static은 기본 위치 배치 방식이다.",
+    "answer": true
+  },
+  {
+    "id": 37,
+    "type": "ox",
+    "category": "CSS",
+    "question": "flex-direction은 Flexbox에서 아이템 배치 방향을 결정한다.",
+    "answer": true
+  },
+  {
+    "id": 38,
+    "type": "ox",
+    "category": "CSS",
+    "question": "gap 속성은 Grid와 Flexbox에서 요소 간 간격을 지정할 수 있다.",
+    "answer": true
+  },
+  {
+    "id": 39,
+    "type": "ox",
+    "category": "CSS",
+    "question": "float 속성은 요소를 왼쪽 또는 오른쪽으로 띄울 수 있다.",
+    "answer": true
+  },
+  {
+    "id": 40,
+    "type": "ox",
+    "category": "CSS",
+    "question": "overflow 속성은 요소가 넘칠 때 처리 방식을 지정한다.",
+    "answer": true
+  },
+
+  {
+    "id": 41,
+    "type": "ox",
+    "category": "JavaScript",
+    "question": "JavaScript는 정적 타입 언어이다.",
+    "answer": false
+  },
+  {
+    "id": 42,
+    "type": "ox",
+    "category": "JavaScript",
+    "question": "JavaScript에서 변수 선언 키워드에는 var, let, const가 있다.",
+    "answer": true
+  },
+  {
+    "id": 43,
+    "type": "ox",
+    "category": "JavaScript",
+    "question": "console.log()는 콘솔에 값을 출력한다.",
+    "answer": true
+  },
+  {
+    "id": 44,
+    "type": "ox",
+    "category": "JavaScript",
+    "question": "typeof 연산자는 변수의 타입을 확인할 수 있다.",
+    "answer": true
+  },
+  {
+    "id": 45,
+    "type": "ox",
+    "category": "JavaScript",
+    "question": "=== 연산자는 값만 비교한다.",
+    "answer": false
+  },
+  {
+    "id": 46,
+    "type": "ox",
+    "category": "JavaScript",
+    "question": "== 연산자는 타입 변환 후 비교할 수 있다.",
+    "answer": true
+  },
+  {
+    "id": 47,
+    "type": "ox",
+    "category": "JavaScript",
+    "question": "Math.random()은 0 이상 1 미만의 난수를 생성한다.",
+    "answer": true
+  },
+  {
+    "id": 48,
+    "type": "ox",
+    "category": "JavaScript",
+    "question": "Math.floor()는 소수를 올림 처리한다.",
+    "answer": false
+  },
+  {
+    "id": 49,
+    "type": "ox",
+    "category": "JavaScript",
+    "question": "Math.ceil()는 소수를 올림 처리한다.",
+    "answer": true
+  },
+  {
+    "id": 50,
+    "type": "ox",
+    "category": "JavaScript",
+    "question": "Math.round()는 반올림을 수행한다.",
+    "answer": true
+  },
+  {
+    "id": 51,
+    "type": "ox",
+    "category": "JavaScript",
+    "question": "setTimeout()은 일정 시간 후 한 번 실행된다.",
+    "answer": true
+  },
+  {
+    "id": 52,
+    "type": "ox",
+    "category": "JavaScript",
+    "question": "setInterval()은 일정 시간 간격으로 반복 실행된다.",
+    "answer": true
+  },
+  {
+    "id": 53,
+    "type": "ox",
+    "category": "JavaScript",
+    "question": "alert()는 브라우저 경고창을 표시한다.",
+    "answer": true
+  },
+  {
+    "id": 54,
+    "type": "ox",
+    "category": "JavaScript",
+    "question": "prompt()는 사용자 입력을 받을 수 있다.",
+    "answer": true
+  },
+  {
+    "id": 55,
+    "type": "ox",
+    "category": "JavaScript",
+    "question": "JSON.parse()는 객체를 JSON 문자열로 변환한다.",
+    "answer": false
+  },
+  {
+    "id": 56,
+    "type": "ox",
+    "category": "JavaScript",
+    "question": "JSON.stringify()는 객체를 JSON 문자열로 변환한다.",
+    "answer": true
+  },
+  {
+    "id": 57,
+    "type": "ox",
+    "category": "JavaScript",
+    "question": "Array.isArray()는 값이 배열인지 확인한다.",
+    "answer": true
+  },
+  {
+    "id": 58,
+    "type": "ox",
+    "category": "JavaScript",
+    "question": "undefined는 값이 아직 정의되지 않았음을 의미한다.",
+    "answer": true
+  },
+  {
+    "id": 59,
+    "type": "ox",
+    "category": "JavaScript",
+    "question": "null은 의도적으로 비어있는 값을 나타낸다.",
+    "answer": true
+  },
+  {
+    "id": 60,
+    "type": "ox",
+    "category": "JavaScript",
+    "question": "NaN은 숫자가 아님을 의미한다.",
+    "answer": true
+  },
+  {
+    "id": 61,
+    "type": "ox",
+    "category": "JavaScript",
+    "question": "JavaScript 배열의 길이는 length 속성으로 확인할 수 있다.",
+    "answer": true
+  },
+  {
+    "id": 62,
+    "type": "ox",
+    "category": "JavaScript",
+    "question": "배열의 마지막 요소를 제거하는 메서드는 pop()이다.",
+    "answer": true
+  },
+  {
+    "id": 63,
+    "type": "ox",
+    "category": "JavaScript",
+    "question": "push() 메서드는 배열의 앞에 요소를 추가한다.",
+    "answer": false
+  },
+  {
+    "id": 64,
+    "type": "ox",
+    "category": "JavaScript",
+    "question": "shift() 메서드는 배열의 첫 번째 요소를 제거한다.",
+    "answer": true
+  },
+  {
+    "id": 65,
+    "type": "ox",
+    "category": "JavaScript",
+    "question": "unshift() 메서드는 배열의 앞부분에 요소를 추가한다.",
+    "answer": true
+  },
+  {
+    "id": 66,
+    "type": "ox",
+    "category": "JavaScript",
+    "question": "document 객체는 HTML 문서를 나타낸다.",
+    "answer": true
+  },
+  {
+    "id": 67,
+    "type": "ox",
+    "category": "JavaScript",
+    "question": "window 객체는 브라우저 창을 나타낸다.",
+    "answer": true
+  },
+  {
+    "id": 68,
+    "type": "ox",
+    "category": "JavaScript",
+    "question": "querySelector()는 CSS 선택자를 사용하여 DOM 요소를 찾는다.",
+    "answer": true
+  },
+  {
+    "id": 69,
+    "type": "ox",
+    "category": "JavaScript",
+    "question": "getElementById()는 클래스 이름으로 요소를 찾는다.",
+    "answer": false
+  },
+  {
+    "id": 70,
+    "type": "ox",
+    "category": "JavaScript",
+    "question": "JavaScript에서 함수는 function 키워드로 선언할 수 있다.",
+    "answer": true
+  },
+
+  {
+    "id": 71,
+    "type": "ox",
+    "category": "HTML",
+    "question": "HTML에서 <form> 태그는 사용자 입력을 받기 위한 영역을 정의한다.",
+    "answer": true
+  },
+  {
+    "id": 72,
+    "type": "ox",
+    "category": "HTML",
+    "question": "<input> 태그는 사용자 입력 필드를 생성한다.",
+    "answer": true
+  },
+  {
+    "id": 73,
+    "type": "ox",
+    "category": "HTML",
+    "question": "<label> 태그는 입력 필드에 설명을 연결할 수 있다.",
+    "answer": true
+  },
+  {
+    "id": 74,
+    "type": "ox",
+    "category": "HTML",
+    "question": "<select> 태그는 드롭다운 목록을 생성한다.",
+    "answer": true
+  },
+  {
+    "id": 75,
+    "type": "ox",
+    "category": "HTML",
+    "question": "<option> 태그는 select 태그 내부의 선택 항목을 정의한다.",
+    "answer": true
+  },
+  {
+    "id": 76,
+    "type": "ox",
+    "category": "HTML",
+    "question": "<button> 태그는 클릭 가능한 버튼을 만든다.",
+    "answer": true
+  },
+  {
+    "id": 77,
+    "type": "ox",
+    "category": "HTML",
+    "question": "<script> 태그는 CSS 코드를 작성할 때 사용된다.",
+    "answer": false
+  },
+  {
+    "id": 78,
+    "type": "ox",
+    "category": "HTML",
+    "question": "<style> 태그는 HTML 문서 내부에 CSS를 작성할 때 사용된다.",
+    "answer": true
+  },
+  {
+    "id": 79,
+    "type": "ox",
+    "category": "HTML",
+    "question": "<link> 태그는 외부 CSS 파일을 연결할 때 사용된다.",
+    "answer": true
+  },
+  {
+    "id": 80,
+    "type": "ox",
+    "category": "HTML",
+    "question": "HTML 태그는 대소문자를 구분해야 한다.",
+    "answer": false
+  },
+
+  {
+    "id": 81,
+    "type": "ox",
+    "category": "CSS",
+    "question": "width 속성은 요소의 가로 크기를 지정한다.",
+    "answer": true
+  },
+  {
+    "id": 82,
+    "type": "ox",
+    "category": "CSS",
+    "question": "height 속성은 요소의 세로 크기를 지정한다.",
+    "answer": true
+  },
+  {
+    "id": 83,
+    "type": "ox",
+    "category": "CSS",
+    "question": "max-width는 요소의 최소 너비를 지정한다.",
+    "answer": false
+  },
+  {
+    "id": 84,
+    "type": "ox",
+    "category": "CSS",
+    "question": "line-height는 줄 간격을 지정하는 속성이다.",
+    "answer": true
+  },
+  {
+    "id": 85,
+    "type": "ox",
+    "category": "CSS",
+    "question": "font-family는 글꼴을 지정한다.",
+    "answer": true
+  },
+  {
+    "id": 86,
+    "type": "ox",
+    "category": "CSS",
+    "question": "cursor 속성은 마우스 포인터 모양을 변경할 수 있다.",
+    "answer": true
+  },
+  {
+    "id": 87,
+    "type": "ox",
+    "category": "CSS",
+    "question": "box-shadow는 요소에 그림자 효과를 줄 수 있다.",
+    "answer": true
+  },
+  {
+    "id": 88,
+    "type": "ox",
+    "category": "CSS",
+    "question": "border-radius는 요소의 모서리를 둥글게 만든다.",
+    "answer": true
+  },
+  {
+    "id": 89,
+    "type": "ox",
+    "category": "CSS",
+    "question": "display:inline 요소는 자동으로 줄바꿈이 발생한다.",
+    "answer": false
+  },
+  {
+    "id": 90,
+    "type": "ox",
+    "category": "CSS",
+    "question": "display:block 요소는 기본적으로 줄바꿈이 발생한다.",
+    "answer": true
+  },
+
+  {
+    "id": 91,
+    "type": "ox",
+    "category": "JavaScript",
+    "question": "JavaScript에서 && 연산자는 논리 AND 연산자이다.",
+    "answer": true
+  },
+  {
+    "id": 92,
+    "type": "ox",
+    "category": "JavaScript",
+    "question": "|| 연산자는 논리 OR 연산자이다.",
+    "answer": true
+  },
+  {
+    "id": 93,
+    "type": "ox",
+    "category": "JavaScript",
+    "question": "! 연산자는 Boolean 값을 반전시킨다.",
+    "answer": true
+  },
+  {
+    "id": 94,
+    "type": "ox",
+    "category": "JavaScript",
+    "question": "=== 연산자는 값과 타입을 모두 비교한다.",
+    "answer": true
+  },
+  {
+    "id": 95,
+    "type": "ox",
+    "category": "JavaScript",
+    "question": "!= 연산자는 값과 타입을 모두 비교한다.",
+    "answer": false
+  },
+  {
+    "id": 96,
+    "type": "ox",
+    "category": "JavaScript",
+    "question": "JavaScript는 이벤트 기반 프로그래밍을 지원한다.",
+    "answer": true
+  },
+  {
+    "id": 97,
+    "type": "ox",
+    "category": "JavaScript",
+    "question": "addEventListener()는 이벤트를 등록할 때 사용된다.",
+    "answer": true
+  },
+  {
+    "id": 98,
+    "type": "ox",
+    "category": "JavaScript",
+    "question": "DOM은 Document Object Model의 약자이다.",
+    "answer": true
+  },
+  {
+    "id": 99,
+    "type": "ox",
+    "category": "JavaScript",
+    "question": "웹 브라우저는 JavaScript 코드를 실행할 수 있다.",
+    "answer": true
+  },
+  {
+    "id": 100,
+    "type": "ox",
+    "category": "JavaScript",
+    "question": "JavaScript는 서버에서만 실행되는 언어이다.",
+    "answer": false
+  }
+]

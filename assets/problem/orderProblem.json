@@ -1,0 +1,419 @@
+[
+  {
+    "id": 1,
+    "type": "order",
+    "category": "HTML",
+    "question": "HTML 기본 문서 구조의 올바른 순서는 무엇인가?",
+    "options": [
+      "<!DOCTYPE html> → <html> → <head> → <body>",
+      "<html> → <!DOCTYPE html> → <head> → <body>",
+      "<!DOCTYPE html> → <head> → <html> → <body>",
+      "<html> → <body> → <head>"
+    ],
+    "answer": 1,
+    "explanation": "HTML 문서는 문서 형식을 선언하는 <!DOCTYPE html>로 시작한다. 그 다음 전체 문서를 감싸는 <html> 태그가 나오고, 문서 설정을 담는 <head>가 위치한다. 마지막으로 실제 화면에 표시되는 내용은 <body> 안에 작성된다."
+  },
+  {
+    "id": 2,
+    "type": "order",
+    "category": "HTML",
+    "question": "HTML 리스트의 올바른 구조 순서는 무엇인가?",
+    "options": [
+      "<ul> → <li>",
+      "<li> → <ul>",
+      "<ul> → <ol> → <li>",
+      "<li> → <ol>"
+    ],
+    "answer": 1,
+    "explanation": "HTML에서 리스트는 먼저 목록 컨테이너를 만들고 그 안에 항목을 작성한다. 순서 없는 목록은 <ul>, 순서 있는 목록은 <ol>이며 그 내부에 <li> 태그로 리스트 항목을 작성한다."
+  },
+  {
+    "id": 3,
+    "type": "order",
+    "category": "HTML",
+    "question": "HTML 폼 작성 순서로 올바른 것은 무엇인가?",
+    "options": [
+      "<form> → <label> → <input>",
+      "<input> → <form> → <label>",
+      "<label> → <form> → <input>",
+      "<input> → <label> → <form>"
+    ],
+    "answer": 1,
+    "explanation": "폼은 먼저 입력 영역을 정의하는 <form> 태그로 시작한다. 그 다음 입력 항목 설명을 제공하는 <label>을 작성하고 실제 입력 필드는 <input> 태그로 만든다."
+  },
+  {
+    "id": 4,
+    "type": "order",
+    "category": "HTML",
+    "question": "HTML에서 이미지와 설명을 작성할 때의 구조는 무엇인가?",
+    "options": [
+      "<figure> → <img> → <figcaption>",
+      "<img> → <figure> → <figcaption>",
+      "<figure> → <figcaption> → <img>",
+      "<figcaption> → <img> → <figure>"
+    ],
+    "answer": 1,
+    "explanation": "이미지와 설명을 함께 묶을 때는 <figure> 태그를 사용한다. 그 안에 실제 이미지인 <img> 태그가 들어가고 설명은 <figcaption>으로 작성한다."
+  },
+  {
+    "id": 5,
+    "type": "order",
+    "category": "HTML",
+    "question": "HTML 페이지 구조의 일반적인 순서는 무엇인가?",
+    "options": [
+      "<header> → <main> → <footer>",
+      "<footer> → <header> → <main>",
+      "<main> → <footer> → <header>",
+      "<header> → <footer> → <main>"
+    ],
+    "answer": 1,
+    "explanation": "웹 페이지 구조는 일반적으로 상단 영역인 header가 먼저 나오고, 실제 콘텐츠 영역인 main이 그 다음에 위치한다. 마지막에는 페이지 하단 정보가 있는 footer가 위치한다."
+  },
+
+  {
+    "id": 6,
+    "type": "order",
+    "category": "CSS",
+    "question": "CSS 박스 모델 구조의 올바른 순서는 무엇인가?",
+    "options": [
+      "content → padding → border → margin",
+      "margin → border → padding → content",
+      "content → border → padding → margin",
+      "padding → content → margin → border"
+    ],
+    "answer": 1,
+    "explanation": "CSS 박스 모델은 요소의 구조를 설명하는 개념이다. 가장 안쪽에 content가 있고 그 다음 내부 여백인 padding, 그 다음 테두리인 border, 가장 바깥쪽에 margin이 위치한다."
+  },
+  {
+    "id": 7,
+    "type": "order",
+    "category": "CSS",
+    "question": "CSS 우선순위가 높은 순서대로 나열된 것은 무엇인가?",
+    "options": [
+      "inline style → id → class → element",
+      "id → inline → class → element",
+      "class → id → inline → element",
+      "element → class → id → inline"
+    ],
+    "answer": 1,
+    "explanation": "CSS는 스타일이 충돌하면 우선순위에 따라 적용된다. 가장 높은 것은 HTML 태그에 직접 작성된 inline style이며 그 다음 id 선택자, class 선택자, 요소 선택자 순서이다."
+  },
+  {
+    "id": 8,
+    "type": "order",
+    "category": "CSS",
+    "question": "요소 크기 지정 시 일반적인 속성 작성 순서는 무엇인가?",
+    "options": [
+      "width → height",
+      "height → width",
+      "margin → width",
+      "padding → height"
+    ],
+    "answer": 1,
+    "explanation": "요소의 크기를 지정할 때 일반적으로 가로 크기인 width를 먼저 지정하고 세로 크기인 height를 지정한다."
+  },
+  {
+    "id": 9,
+    "type": "order",
+    "category": "CSS",
+    "question": "CSS 레이아웃 발전 순서는 무엇인가?",
+    "options": [
+      "float → flex → grid",
+      "grid → float → flex",
+      "flex → float → grid",
+      "block → inline → float"
+    ],
+    "answer": 1,
+    "explanation": "초기 웹 레이아웃은 float을 사용했다. 이후 더 유연한 레이아웃을 위한 flexbox가 등장했고, 마지막으로 2차원 레이아웃을 지원하는 grid가 등장했다."
+  },
+  {
+    "id": 10,
+    "type": "order",
+    "category": "CSS",
+    "question": "display 속성의 일반적인 유형 순서는 무엇인가?",
+    "options": [
+      "inline → block → flex → grid",
+      "grid → flex → block → inline",
+      "block → inline → grid",
+      "flex → inline → block"
+    ],
+    "answer": 1,
+    "explanation": "초기 HTML 요소는 inline 또는 block으로 나뉘었다. 이후 레이아웃을 위한 flex와 grid가 등장했다."
+  },
+
+  {
+    "id": 11,
+    "type": "order",
+    "category": "JavaScript",
+    "question": "JavaScript 배열에서 데이터를 추가하고 제거하는 순서는 무엇인가?",
+    "options": ["push → pop", "pop → push", "shift → push", "pop → shift"],
+    "answer": 1,
+    "explanation": "push는 배열 끝에 요소를 추가하고 pop은 배열 마지막 요소를 제거한다. 따라서 push 후 pop 순서가 일반적이다."
+  },
+  {
+    "id": 12,
+    "type": "order",
+    "category": "JavaScript",
+    "question": "배열 앞부분에서 데이터를 처리하는 순서는 무엇인가?",
+    "options": [
+      "unshift → shift",
+      "shift → unshift",
+      "push → shift",
+      "pop → unshift"
+    ],
+    "answer": 1,
+    "explanation": "unshift는 배열 앞에 요소를 추가하고 shift는 배열 첫 번째 요소를 제거한다."
+  },
+  {
+    "id": 13,
+    "type": "order",
+    "category": "JavaScript",
+    "question": "JavaScript 코드 실행 기본 흐름은 무엇인가?",
+    "options": [
+      "위에서 아래로 실행",
+      "아래에서 위로 실행",
+      "랜덤 실행",
+      "오른쪽에서 왼쪽 실행"
+    ],
+    "answer": 1,
+    "explanation": "JavaScript 코드는 기본적으로 위에서 아래로 순차적으로 실행된다."
+  },
+  {
+    "id": 14,
+    "type": "order",
+    "category": "JavaScript",
+    "question": "DOM을 조작할 때 일반적인 순서는 무엇인가?",
+    "options": [
+      "요소 선택 → 내용 변경",
+      "내용 변경 → 요소 선택",
+      "스타일 변경 → 요소 선택",
+      "삭제 → 선택"
+    ],
+    "answer": 1,
+    "explanation": "JavaScript로 DOM을 조작할 때는 먼저 요소를 선택한 후 속성이나 내용을 변경한다."
+  },
+  {
+    "id": 15,
+    "type": "order",
+    "category": "JavaScript",
+    "question": "콘솔 출력 순서 이해 문제이다. 다음 코드 실행 순서는 무엇인가?",
+    "options": [
+      "console.log('A') → console.log('B')",
+      "console.log('B') → console.log('A')",
+      "동시에 실행",
+      "랜덤 실행"
+    ],
+    "answer": 1,
+    "explanation": "JavaScript는 기본적으로 위에서 아래로 코드를 실행하기 때문에 먼저 작성된 코드가 먼저 실행된다."
+  },
+
+  {
+    "id": 16,
+    "type": "order",
+    "category": "HTML",
+    "question": "HTML 태그 작성의 기본 구조는 무엇인가?",
+    "options": [
+      "열린 태그 → 내용 → 닫는 태그",
+      "내용 → 열린 태그 → 닫는 태그",
+      "닫는 태그 → 내용 → 열린 태그",
+      "열린 태그 → 닫는 태그 → 내용"
+    ],
+    "answer": 1,
+    "explanation": "대부분의 HTML 태그는 열린 태그로 시작하고 그 안에 내용이 들어간 뒤 닫는 태그로 끝난다."
+  },
+  {
+    "id": 17,
+    "type": "order",
+    "category": "HTML",
+    "question": "HTML 테이블 기본 구조는 무엇인가?",
+    "options": [
+      "<table> → <tr> → <td>",
+      "<td> → <table> → <tr>",
+      "<tr> → <table> → <td>",
+      "<td> → <tr> → <table>"
+    ],
+    "answer": 1,
+    "explanation": "HTML 테이블은 table 태그로 시작하고 그 안에 행을 의미하는 tr이 있으며 각 셀은 td로 작성된다."
+  },
+  {
+    "id": 18,
+    "type": "order",
+    "category": "HTML",
+    "question": "드롭다운 메뉴의 구조 순서는 무엇인가?",
+    "options": [
+      "<select> → <option>",
+      "<option> → <select>",
+      "<input> → <option>",
+      "<form> → <option>"
+    ],
+    "answer": 1,
+    "explanation": "드롭다운 메뉴는 select 태그로 생성하고 그 안에 option 태그로 선택 항목을 만든다."
+  },
+
+  {
+    "id": 19,
+    "type": "order",
+    "category": "CSS",
+    "question": "요소를 화면 중앙 정렬할 때 일반적으로 적용하는 순서는 무엇인가?",
+    "options": [
+      "display:flex → justify-content:center",
+      "justify-content:center → display:flex",
+      "text-align:center → display:flex",
+      "display:block → justify-content:center"
+    ],
+    "answer": 1,
+    "explanation": "flexbox를 사용할 때 먼저 display:flex를 적용하여 flex 컨테이너를 만든 뒤 justify-content:center를 사용해 중앙 정렬을 수행한다."
+  },
+  {
+    "id": 20,
+    "type": "order",
+    "category": "CSS",
+    "question": "글자 스타일 지정 순서는 무엇인가?",
+    "options": [
+      "font-family → font-size",
+      "font-size → font-family",
+      "color → font-size",
+      "font-weight → font-family"
+    ],
+    "answer": 1,
+    "explanation": "일반적으로 글꼴 종류를 먼저 지정하고 이후 크기를 지정한다."
+  },
+
+  {
+    "id": 21,
+    "type": "order",
+    "category": "JavaScript",
+    "question": "변수 사용 기본 순서는 무엇인가?",
+    "options": [
+      "변수 선언 → 값 할당 → 사용",
+      "값 할당 → 선언 → 사용",
+      "사용 → 선언 → 할당",
+      "선언 → 사용 → 할당"
+    ],
+    "answer": 1,
+    "explanation": "JavaScript에서는 먼저 변수를 선언하고 값을 할당한 후 해당 변수를 사용할 수 있다."
+  },
+  {
+    "id": 22,
+    "type": "order",
+    "category": "JavaScript",
+    "question": "함수 사용 기본 흐름은 무엇인가?",
+    "options": [
+      "함수 선언 → 함수 호출",
+      "함수 호출 → 선언",
+      "함수 호출 → 실행 → 선언",
+      "실행 → 선언"
+    ],
+    "answer": 1,
+    "explanation": "함수를 먼저 선언한 후 필요할 때 호출하여 실행한다."
+  },
+  {
+    "id": 23,
+    "type": "order",
+    "category": "JavaScript",
+    "question": "배열을 만드는 기본 순서는 무엇인가?",
+    "options": [
+      "배열 생성 → 값 추가",
+      "값 추가 → 배열 생성",
+      "값 삭제 → 배열 생성",
+      "출력 → 배열 생성"
+    ],
+    "answer": 1,
+    "explanation": "배열은 먼저 생성한 뒤 push 등의 메서드를 사용해 값을 추가한다."
+  },
+
+  {
+    "id": 24,
+    "type": "order",
+    "category": "HTML",
+    "question": "HTML 페이지 작성 시 일반적인 작업 순서는 무엇인가?",
+    "options": [
+      "HTML 구조 작성 → CSS 스타일 적용 → JavaScript 기능 추가",
+      "JavaScript 작성 → HTML → CSS",
+      "CSS → JavaScript → HTML",
+      "JavaScript → CSS → HTML"
+    ],
+    "answer": 1,
+    "explanation": "웹 페이지 개발은 먼저 HTML로 구조를 만들고 CSS로 디자인을 적용하며 마지막으로 JavaScript로 동작을 추가한다."
+  },
+  {
+    "id": 25,
+    "type": "order",
+    "category": "CSS",
+    "question": "색상 스타일 적용 순서는 무엇인가?",
+    "options": [
+      "background-color → color",
+      "color → background-color",
+      "border → color",
+      "font-size → color"
+    ],
+    "answer": 1,
+    "explanation": "일반적으로 요소의 배경 색을 먼저 설정하고 그 위에 텍스트 색을 설정한다."
+  },
+
+  {
+    "id": 26,
+    "type": "order",
+    "category": "JavaScript",
+    "question": "alert 메시지 실행 순서는 무엇인가?",
+    "options": [
+      "코드 실행 → alert 표시",
+      "alert 표시 → 코드 실행",
+      "동시에 실행",
+      "랜덤 실행"
+    ],
+    "answer": 1,
+    "explanation": "JavaScript 코드가 실행되면 해당 줄에서 alert가 실행되고 메시지 창이 나타난다."
+  },
+  {
+    "id": 27,
+    "type": "order",
+    "category": "HTML",
+    "question": "HTML 문서 작성 시 메타 정보 위치는 무엇인가?",
+    "options": [
+      "<head> 안에 작성",
+      "<body> 안에 작성",
+      "<footer> 안에 작성",
+      "<nav> 안에 작성"
+    ],
+    "answer": 1,
+    "explanation": "meta, title, link 같은 문서 설정 정보는 head 태그 내부에 작성한다."
+  },
+  {
+    "id": 28,
+    "type": "order",
+    "category": "CSS",
+    "question": "CSS 작성 기본 구조는 무엇인가?",
+    "options": [
+      "선택자 → 속성 → 값",
+      "속성 → 선택자 → 값",
+      "값 → 속성 → 선택자",
+      "값 → 선택자 → 속성"
+    ],
+    "answer": 1,
+    "explanation": "CSS는 먼저 스타일을 적용할 선택자를 작성하고 그 다음 속성과 값을 작성한다."
+  },
+  {
+    "id": 29,
+    "type": "order",
+    "category": "JavaScript",
+    "question": "콘솔 출력 기본 흐름은 무엇인가?",
+    "options": [
+      "코드 실행 → console.log 출력",
+      "console.log 출력 → 코드 실행",
+      "동시에 실행",
+      "랜덤 실행"
+    ],
+    "answer": 1,
+    "explanation": "console.log는 해당 코드가 실행될 때 콘솔에 값을 출력한다."
+  },
+  {
+    "id": 30,
+    "type": "order",
+    "category": "HTML",
+    "question": "HTML 문서에서 실제 콘텐츠가 들어가는 위치는 어디인가?",
+    "options": ["<body>", "<head>", "<html>", "<meta>"],
+    "answer": 1,
+    "explanation": "body 태그는 실제 웹 페이지에 표시되는 콘텐츠가 들어가는 영역이다. 텍스트, 이미지, 버튼 등 화면에 보이는 모든 요소는 body 안에 작성된다."
+  }
+]
