@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>게임 결과</title>
+    <link rel="stylesheet" href="../css/ResultPage.css" />
+    <script src="../js/ResultPage.js" defer></script>
+  </head>
+
+  <body>
+    <main class="result-page">
+      <section class="result-card" aria-labelledby="result-title">
+        <p class="eyebrow">QUIZ RESULT</p>
+        <h1 id="result-title">게임 결과</h1>
+        <p id="result-message" class="result-message">
+          오늘도 한 단계 성장했어요.
+        </p>
+
+        <div class="score-area">
+          <div
+            id="score-ring"
+            class="score-ring"
+            role="img"
+            aria-label="정답률"
+          >
+            <span id="accuracy-text">0%</span>
+          </div>
+          <div class="score-summary">
+            <p class="score-label">정답 문제 수</p>
+            <p id="correct-text" class="correct-highlight">
+              <span id="correct-count" class="correct-count">0</span>
+              <span class="correct-divider">/</span>
+              <span id="total-count" class="correct-total">10</span>
+            </p>
+            <p class="score-label score-label-secondary">획득 경험치</p>
+            <p class="score-value">
+              <span id="score-text">0</span> /
+              <span id="score-max-text">100</span>
+            </p>
+          </div>
+        </div>
+
+        <ul class="detail-list">
+          <li><span>획득 경험치</span><strong id="exp-text">+0 EXP</strong></li>
+          <li>
+            <span>레벨업까지</span
+            ><strong id="remain-exp-text">0 EXP 남음</strong>
+          </li>
+          <li><span>오답 개수</span><strong id="wrong-text">0개</strong></li>
+          <li><span>소요 시간</span><strong id="time-text">00:00</strong></li>
+        </ul>
+
+        <div class="button-row">
+          <a id="review-link" class="btn secondary" href="#">오답노트 보기</a>
+          <a id="main-link" class="btn ghost" href="#">메인으로</a>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
