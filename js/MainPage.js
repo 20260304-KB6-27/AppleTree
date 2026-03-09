@@ -94,6 +94,9 @@ levelBtn.addEventListener('click', () => {
     setExp(exp);
 
     updateUI();
+
+    // 영상 페이지로 이동
+    window.location.href = 'LevelUpPage.html';
   }
 });
 
