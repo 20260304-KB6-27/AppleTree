@@ -1,10 +1,17 @@
-const EXP_PER_LEVEL = 300;
-const MAX_LEVEL = 3;
+const MAX_LEVEL = 3; // 도달 가능한 최대 레벨
 
 const progress = document.getElementById('progress');
 const levelBtn = document.getElementById('levelBtn');
 const bg = document.getElementById('bg');
 const character = document.getElementById('character');
+const levelText = document.getElementById('level-text');
+const expText = document.getElementById('exp-text');
+
+function getExpPerLevel(level) {
+  if (level === 1) return 300; // 1 -> 2
+  if (level === 2) return 500; // 2 -> 3
+  return 0;
+}
 
 /* ---------------------- */
 /* localStorage 초기값 */
@@ -45,19 +52,25 @@ function setExp(v) {
 function updateUI() {
   const level = getLevel();
   const exp = getExp();
+  const expNeeded = getExpPerLevel(level);
 
   /* progress */
-  const percent = Math.min((exp / EXP_PER_LEVEL) * 100, 100);
+  const percent = Math.min((exp / expNeeded) * 100, 100);
   progress.style.width = percent + '%';
+
+  /* level 표시 */
+  levelText.textContent = `LEVEL ${level}`;
+
+  /* exp 표시 */
+  expText.textContent = `${Math.min(exp, expNeeded)} / ${expNeeded}`;
 
   /* LEVEL UP 버튼 조건 */
   if (level >= MAX_LEVEL) {
     levelBtn.disabled = true;
   } else {
-    levelBtn.disabled = exp < EXP_PER_LEVEL;
+    levelBtn.disabled = exp < expNeeded;
   }
 
-  /* 이미지 변경 */
   bg.src = `/assets/image/bg-level${level}.png`;
   character.src = `/assets/image/character-level${level}.png`;
 }
@@ -69,11 +82,12 @@ function updateUI() {
 levelBtn.addEventListener('click', () => {
   let level = getLevel();
   let exp = getExp();
+  const expNeeded = getExpPerLevel(level);
 
   if (level >= MAX_LEVEL) return;
 
-  if (exp >= EXP_PER_LEVEL) {
-    exp -= EXP_PER_LEVEL;
+  if (exp >= expNeeded) {
+    exp -= expNeeded;
     level += 1;
 
     setLevel(level);

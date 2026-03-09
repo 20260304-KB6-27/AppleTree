@@ -47,6 +47,7 @@ body {
   background: #eee;
   border-radius: 10px;
   overflow: hidden;
+  position: relative;
 }
 
 #progress {
@@ -54,6 +55,30 @@ body {
   width: 0%;
   background: #9cc44b;
   border-radius: 10px;
+}
+
+#text-container {
+  width: 100%;
+  position: absolute;
+  top: 30%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+/* 현재 레벨 */
+#level-text {
+  font-weight: 700;
+  color: #483524;
+  font-size: 18px;
+}
+
+/* 현재 경험치 */
+#exp-text {
+  font-size: 18px;
+  font-weight: 700;
+  color: #483524;
 }
 
 /* level 버튼 */
@@ -94,7 +119,7 @@ body {
 
 /* 시작 버튼 */
 #startBtn {
-  padding: 18px 80px;
+  padding: 18px 100px;
   border: none;
   border-radius: 30px;
   color: #483524;
