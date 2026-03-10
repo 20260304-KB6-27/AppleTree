@@ -20,6 +20,7 @@ const elements = {
     nextBtn: document.getElementById('nextBtn'),
     finishBtn: document.getElementById('finishBtn'),
     timerAudio: document.getElementById('quizAudio'),
+    timerBar: document.getElementById('timerBar'),
 };
 
 // 퀴즈 데이터 불러오기
@@ -230,6 +231,9 @@ function updateTimer() {
     const minutes = String(Math.floor(state.timeLeft / 60)).padStart(2, '0');
     const seconds = String(state.timeLeft % 60).padStart(2, '0');
     elements.timer.textContent = `${minutes}:${seconds}`;
+
+    const percent = (state.timeLeft / QUIZ_TIME) * 100;
+    elements.timerBar.style.width = `${percent}%`;
 }
 
 // 정답 계산

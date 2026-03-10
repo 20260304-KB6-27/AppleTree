@@ -91,6 +91,26 @@ button {
     font-size: 20px;
 }
 
+.timer-bar-container {
+    width: 100%;
+    max-width: 720px;
+    height: 20px;
+    background: #d6d6d6;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 12px;
+
+    position: relative;
+    z-index: 2;
+}
+
+.timer-bar {
+    height: 100%;
+    width: 100%;
+    background: #fde068;
+    transition: width 1s linear;
+}
+
 .question-box {
     margin-bottom: 24px;
 }
