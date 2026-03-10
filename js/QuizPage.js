@@ -20,6 +20,7 @@ const elements = {
     nextBtn: document.getElementById('nextBtn'),
     finishBtn: document.getElementById('finishBtn'),
     timerAudio: document.getElementById('quizAudio'),
+    timerBar: document.getElementById('timerBar'),
 };
 
 // 퀴즈 데이터 불러오기
@@ -39,6 +40,18 @@ async function loadQuizData() {
         console.error(error);
         elements.questionText.textContent = '문제 데이터 불러오기 실패';
     }
+}
+
+// 배경 설정
+function getLevel() {
+    return Number(localStorage.getItem('level'));
+}
+
+function setBackgroundByLevel() {
+    const level = getLevel() || 1;
+    const bg = document.getElementById('bgImage');
+
+    bg.src = `../assets/image/bg-level${level}.png`;
 }
 
 // 퀴즈 시작
@@ -218,6 +231,9 @@ function updateTimer() {
     const minutes = String(Math.floor(state.timeLeft / 60)).padStart(2, '0');
     const seconds = String(state.timeLeft % 60).padStart(2, '0');
     elements.timer.textContent = `${minutes}:${seconds}`;
+
+    const percent = (state.timeLeft / QUIZ_TIME) * 100;
+    elements.timerBar.style.width = `${percent}%`;
 }
 
 // 정답 계산
@@ -264,4 +280,5 @@ function finishQuiz() {
 elements.nextBtn.addEventListener('click', nextQuestion);
 elements.finishBtn.addEventListener('click', finishQuiz);
 
+setBackgroundByLevel();
 loadQuizData();
