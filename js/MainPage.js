@@ -8,9 +8,9 @@ const levelText = document.getElementById('level-text');
 const expText = document.getElementById('exp-text');
 
 function getExpPerLevel(level) {
-  if (level === 1) return 300; // 1 -> 2
-  if (level === 2) return 500; // 2 -> 3
-  return 0;
+    if (level === 1) return 300; // 1 -> 2
+    if (level === 2) return 500; // 2 -> 3
+    return 0;
 }
 
 /* ---------------------- */
@@ -18,11 +18,11 @@ function getExpPerLevel(level) {
 /* ---------------------- */
 
 if (!localStorage.getItem('level')) {
-  localStorage.setItem('level', 1);
+    localStorage.setItem('level', 1);
 }
 
 if (!localStorage.getItem('exp')) {
-  localStorage.setItem('exp', 0);
+    localStorage.setItem('exp', 0);
 }
 
 /* ---------------------- */
@@ -30,19 +30,19 @@ if (!localStorage.getItem('exp')) {
 /* ---------------------- */
 
 function getLevel() {
-  return Number(localStorage.getItem('level'));
+    return Number(localStorage.getItem('level'));
 }
 
 function getExp() {
-  return Number(localStorage.getItem('exp'));
+    return Number(localStorage.getItem('exp'));
 }
 
 function setLevel(v) {
-  localStorage.setItem('level', v);
+    localStorage.setItem('level', v);
 }
 
 function setExp(v) {
-  localStorage.setItem('exp', v);
+    localStorage.setItem('exp', v);
 }
 
 /* ---------------------- */
@@ -50,29 +50,29 @@ function setExp(v) {
 /* ---------------------- */
 
 function updateUI() {
-  const level = getLevel();
-  const exp = getExp();
-  const expNeeded = getExpPerLevel(level);
+    const level = getLevel();
+    const exp = getExp();
+    const expNeeded = getExpPerLevel(level);
 
-  /* level 표시 */
-  levelText.textContent = `LEVEL ${level}`;
+    /* level 표시 */
+    levelText.textContent = `LEVEL ${level}`;
 
-  if (level >= MAX_LEVEL) {
-    progress.style.width = '100%';
+    if (level >= MAX_LEVEL) {
+        progress.style.width = '100%';
 
-    expText.textContent = `${exp} EXP`;
+        expText.textContent = `${exp} EXP`;
 
-    levelBtn.disabled = true;
-  } else {
-    const percent = Math.min((exp / expNeeded) * 100, 100);
-    progress.style.width = percent + '%';
+        levelBtn.disabled = true;
+    } else {
+        const percent = Math.min((exp / expNeeded) * 100, 100);
+        progress.style.width = percent + '%';
 
-    expText.textContent = `${Math.min(exp, expNeeded)} / ${expNeeded}`;
-    levelBtn.disabled = exp < expNeeded;
-  }
+        expText.textContent = `${Math.min(exp, expNeeded)} / ${expNeeded}`;
+        levelBtn.disabled = exp < expNeeded;
+    }
 
-  bg.src = `../assets/image/bg-level${level}.png`;
-  character.src = `../assets/image/character-level${level}.png`;
+    bg.src = `../assets/image/bg-level${level}.png`;
+    character.src = `../assets/image/character-level${level}.png`;
 }
 
 /* ---------------------- */
@@ -80,24 +80,24 @@ function updateUI() {
 /* ---------------------- */
 
 levelBtn.addEventListener('click', () => {
-  let level = getLevel();
-  let exp = getExp();
-  const expNeeded = getExpPerLevel(level);
+    let level = getLevel();
+    let exp = getExp();
+    const expNeeded = getExpPerLevel(level);
 
-  if (level >= MAX_LEVEL) return;
+    if (level >= MAX_LEVEL) return;
 
-  if (exp >= expNeeded) {
-    exp -= expNeeded;
-    level += 1;
+    if (exp >= expNeeded) {
+        exp -= expNeeded;
+        level += 1;
 
-    setLevel(level);
-    setExp(exp);
+        setLevel(level);
+        setExp(exp);
 
-    updateUI();
+        updateUI();
 
-    // 영상 페이지로 이동
-    window.location.href = 'LevelUpPage.html';
-  }
+        // 영상 페이지로 이동
+        window.location.href = 'LevelUpPage.html';
+    }
 });
 
 /* ---------------------- */
@@ -105,7 +105,7 @@ levelBtn.addEventListener('click', () => {
 /* ---------------------- */
 
 document.getElementById('startBtn').addEventListener('click', () => {
-  window.location.href = 'quiz.html';
+    window.location.href = 'QuizPage.html';
 });
 
 /* 초기 렌더 */

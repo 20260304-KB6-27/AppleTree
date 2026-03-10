@@ -1,40 +1,40 @@
 <!doctype html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>문제 해설</title>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>문제 해설</title>
 
-    <link rel="stylesheet" href="../css/quiz_style.css" />
-    <link rel="stylesheet" href="../css/ExplainPage.css" />
-  </head>
+        <link rel="stylesheet" href="../css/QuizPage.css" />
+        <link rel="stylesheet" href="../css/ExplainPage.css" />
+    </head>
 
-  <body>
-    <div class="quiz-page">
-      <div class="overlay"></div>
+    <body>
+        <div class="quiz-page">
+            <div class="overlay"></div>
 
-      <header class="quiz-header"></header>
+            <header class="quiz-header"></header>
 
-      <main class="quiz-card">
-        <!-- 틀린 문제 표시 -->
-        <div id="wrong-indicator" class="wrong-indicator"></div>
+            <main class="quiz-card">
+                <!-- 틀린 문제 표시 -->
+                <div id="wrong-indicator" class="wrong-indicator"></div>
 
-        <div class="question-box">
-          <h2 id="question" class="question-text"></h2>
+                <div class="question-box">
+                    <h2 id="question" class="question-text"></h2>
+                </div>
+
+                <!-- 정답 표시 -->
+                <div id="options" class="answer-area"></div>
+
+                <!-- 해설 -->
+                <div id="explanation" class="explanation"></div>
+            </main>
+
+            <div class="bottom-area">
+                <button class="next-btn home-btn">메인 화면</button>
+            </div>
         </div>
 
-        <!-- 정답 표시 -->
-        <div id="options" class="answer-area"></div>
-
-        <!-- 해설 -->
-        <div id="explanation" class="explanation"></div>
-      </main>
-
-      <div class="bottom-area">
-        <button class="next-btn home-btn">메인 화면</button>
-      </div>
-    </div>
-
-    <script src="../js/ExplainPage.js"></script>
-  </body>
+        <script src="../js/ExplainPage.js"></script>
+    </body>
 </html>
