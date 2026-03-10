@@ -1,21 +1,22 @@
 // Centralized game balance config. Change only this block to rebalance.
 const GAME_BALANCE = {
-  // Number of character stages (1..N)
+  // Number of character stages
   stages: 3,
-  // Display name by stage.
+  // Display name by stage
   stageNames: {
     1: '학생',
     2: '직원',
     3: '지점장',
   },
   // Required exp to move from current stage to next stage.
-  // Example: 1:300 means stage 1 -> 2 needs 300 exp.
+  // ex) 1: 300 means stage 1 -> 2 needs 300 exp.
   expToNextStage: {
     1: 300,
-    2: 1000,
+    2: 500,
   },
+
   // Background image by stage.
-  // Replace level2/level3 files with your final tier images.
+  // TODO: 2레벨, 3레벨 배경으로 수정
   tierBackgroundFiles: {
     1: 'assets/image/bg-level1.png',
     2: 'assets/image/bg-level1.png',
@@ -39,6 +40,7 @@ const DEFAULT_RESULT = {
   correct: DEFAULT_CORRECT,
   total: GAME_BALANCE.quiz.questionsPerRound,
   duration: QUIZ_TIME_LIMIT_SECONDS,
+  earnedExp: DEFAULT_CORRECT * GAME_BALANCE.quiz.scorePerCorrect,
   exp: DEFAULT_CORRECT * GAME_BALANCE.quiz.scorePerCorrect,
   level: 1,
   currentExp: DEFAULT_CORRECT * GAME_BALANCE.quiz.scorePerCorrect,
@@ -52,16 +54,16 @@ const LEGACY_STORAGE_KEYS = {
   total: ['quizTotal', 'totalQuestions', 'total'],
   wrongQuestionNumbers: [
     'wrongQuestionNumbers',
-    'wrongQuestions',
+    'wrongQuestion',
     'wrongQuestionList',
     'incorrectQuestionNumbers',
     'wrongIndexes',
   ],
   spentTime: ['spentTime'],
   duration: ['quizDuration', 'elapsedTime', 'duration'],
-  exp: ['earnedExp', 'gainedExp', 'exp'],
+  earnedExp: ['earnedExp', 'gainedExp'],
   level: ['level', 'stage', 'currentLevel'],
-  currentExp: ['currentExp', 'levelExp', 'totalExp', 'playerExp'],
+  currentExp: ['currentExp', 'levelExp', 'totalExp', 'playerExp', 'exp'],
   requiredExp: ['requiredExp', 'levelGoal', 'nextLevelExp'],
   reviewUrl: ['reviewUrl', 'wrongNoteUrl'],
   mainUrl: ['mainUrl', 'homeUrl'],
@@ -173,7 +175,7 @@ const normalizeGameResult = (
   );
   const wrongQuestionNumbers = parseWrongQuestionNumbers(
     rawResult.wrongQuestionNumbers ??
-      rawResult.wrongQuestions ??
+      rawResult.wrongQuestion ??
       rawResult.wrongQuestionList ??
       rawResult.incorrectQuestionNumbers,
   );
@@ -188,8 +190,9 @@ const normalizeGameResult = (
     0,
     total,
   );
-  const exp = clamp(
-    toNumber(rawResult.exp, correct * GAME_BALANCE.quiz.scorePerCorrect),
+  // Earned exp is deterministic per round: correct answers * exp per correct answer.
+  const earnedExp = clamp(
+    correct * GAME_BALANCE.quiz.scorePerCorrect,
     0,
     MAX_GAIN_PER_ROUND,
   );
@@ -203,8 +206,11 @@ const normalizeGameResult = (
   );
   const currentExp = clamp(
     toNumber(
-      rawResult.currentExp ?? rawResult.levelExp ?? rawResult.totalExp,
-      exp,
+      rawResult.currentExp ??
+        rawResult.levelExp ??
+        rawResult.totalExp ??
+        rawResult.exp,
+      earnedExp,
     ),
     0,
     requiredExp > 0 ? requiredExp : 9999,
@@ -228,7 +234,9 @@ const normalizeGameResult = (
     currentExp,
     requiredExp,
     remainingExp,
-    exp,
+    earnedExp,
+    // Keep exp for backward compatibility with existing consumers.
+    exp: earnedExp,
     correct,
     wrongQuestionNumbers,
     wrongCount,
@@ -291,7 +299,7 @@ const readLegacyResultFromStorage = () => {
     wrongQuestionNumbers: readFirst(LEGACY_STORAGE_KEYS.wrongQuestionNumbers),
     spentTime: readFirst(LEGACY_STORAGE_KEYS.spentTime),
     duration: readFirst(LEGACY_STORAGE_KEYS.duration),
-    exp: readFirst(LEGACY_STORAGE_KEYS.exp),
+    earnedExp: readFirst(LEGACY_STORAGE_KEYS.earnedExp),
     level: readFirst(LEGACY_STORAGE_KEYS.level),
     currentExp: readFirst(LEGACY_STORAGE_KEYS.currentExp),
     requiredExp: readFirst(LEGACY_STORAGE_KEYS.requiredExp),
@@ -302,7 +310,7 @@ const readLegacyResultFromStorage = () => {
   };
 };
 
-// External setter for other pages: window.setGameResult({ exp, spentTime, wrongQuestionNumbers, ... })
+// External setter for other pages: window.setGameResult({ currentExp, spentTime, wrongQuestionNumbers, ... })
 const setGameResult = (partialResult = {}) => {
   const fromStorage = readResultFromStorage();
   const merged = {
@@ -347,10 +355,22 @@ const resolveResultData = () => {
     wrongQuestionNumbers !== null
       ? clamp(wrongQuestionNumbers.length, 0, total)
       : null;
+  const correctFromLegacyEarnedExp = (() => {
+    const parsed = Number(source.earnedExp);
+    if (!Number.isFinite(parsed)) return null;
+    return clamp(
+      Math.round(parsed / GAME_BALANCE.quiz.scorePerCorrect),
+      0,
+      total,
+    );
+  })();
   const correct = clamp(
     wrongCountFromList !== null
       ? total - wrongCountFromList
-      : toNumber(source.correct, DEFAULT_RESULT.correct),
+      : toNumber(
+          source.correct,
+          correctFromLegacyEarnedExp ?? DEFAULT_RESULT.correct,
+        ),
     0,
     total,
   );
@@ -363,8 +383,8 @@ const resolveResultData = () => {
     0,
     QUIZ_TIME_LIMIT_SECONDS,
   );
-  const exp = clamp(
-    toNumber(source.exp, DEFAULT_RESULT.exp),
+  const earnedExp = clamp(
+    correct * GAME_BALANCE.quiz.scorePerCorrect,
     0,
     MAX_GAIN_PER_ROUND,
   );
@@ -381,7 +401,10 @@ const resolveResultData = () => {
   );
   // If cumulative exp is provided, prefer it for "exp to next level".
   const currentExp = clamp(
-    toNumber(source.currentExp ?? source.levelExp ?? source.totalExp, exp),
+    toNumber(
+      source.currentExp ?? source.levelExp ?? source.totalExp ?? source.exp,
+      earnedExp,
+    ),
     0,
     requiredExp > 0 ? requiredExp : 9999,
   );
@@ -399,7 +422,9 @@ const resolveResultData = () => {
     total,
     correct,
     duration,
-    exp,
+    earnedExp,
+    // Keep exp for backward compatibility with existing consumers.
+    exp: earnedExp,
     level,
     currentExp,
     requiredExp,
@@ -454,7 +479,7 @@ const render = () => {
 
   if (scoreRing) scoreRing.style.setProperty('--percent', String(accuracy));
   if (accuracyText) accuracyText.textContent = `${accuracy}%`;
-  if (scoreText) scoreText.textContent = String(result.exp);
+  if (scoreText) scoreText.textContent = String(result.earnedExp);
   if (scoreMaxText) scoreMaxText.textContent = String(result.expMax);
   if (correctCount) correctCount.textContent = String(result.correct);
   if (totalCount) totalCount.textContent = String(result.total);
@@ -462,7 +487,7 @@ const render = () => {
   if (correctText && !correctCount) {
     correctText.textContent = `${result.correct} / ${result.total} 정답`;
   }
-  if (expText) expText.textContent = `+${result.exp} EXP`;
+  if (expText) expText.textContent = `+${result.earnedExp} EXP`;
   if (remainExpText) {
     const nextLevel = Math.min(result.level + 1, GAME_BALANCE.stages);
     const nextStageName = getStageName(nextLevel);
@@ -471,7 +496,7 @@ const render = () => {
     } else if (result.remainingExp === 0) {
       remainExpText.textContent = `${nextStageName}으로 승급 가능`;
     } else {
-      remainExpText.textContent = `다음 직급까지 앞으로 ${result.remainingExp} EXP`;
+      remainExpText.textContent = `다음 단계까지 앞으로 ${result.remainingExp} EXP`;
     }
   }
   if (wrongText) wrongText.textContent = `${wrong}개`;

@@ -20,6 +20,7 @@
 }
 
 body {
+  //TODO: 폰트 통합 필요
   font-family: 'Pretendard', 'Noto Sans KR', 'Apple SD Gothic Neo', sans-serif;
   color: var(--text-main);
   background-color: #ffeda0;
