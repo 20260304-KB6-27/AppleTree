@@ -4,7 +4,7 @@ const explanationDiv = document.getElementById('explanation');
 const wrongIndicator = document.getElementById('wrong-indicator');
 
 /* 틀린 문제 id */
-const wrongIds = [1, 58, 185];
+const wrongIds = JSON.parse(localStorage.getItem('wrongIds')) || [];
 
 let currentIndex = 0;
 let problems = [];
