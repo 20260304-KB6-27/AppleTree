@@ -257,7 +257,7 @@ function finishQuiz() {
     stopAudio();
     saveResult();
 
-    window.location.href = 'quiz_result.html';
+    window.location.href = 'ResultPage.html';
 }
 
 // 이벤트
