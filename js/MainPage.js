@@ -101,17 +101,11 @@ levelBtn.addEventListener('click', () => {
 });
 
 /* ---------------------- */
-/* 테스트용 exp 증가 (추후 삭제할 코드) */
+/* 시작버튼 클릭시 퀴즈페이지로 이동 */
 /* ---------------------- */
 
 document.getElementById('startBtn').addEventListener('click', () => {
-  let level = getLevel();
-  let exp = getExp();
-
-  exp += 80;
-
-  setExp(exp);
-  updateUI();
+  window.location.href = 'quiz.html';
 });
 
 /* 초기 렌더 */
