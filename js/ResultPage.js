@@ -73,7 +73,7 @@ const getDefaultRoutes = () => {
   const isInsideHtmlDir = window.location.pathname.includes('/html/');
   const prefix = isInsideHtmlDir ? './' : './html/';
   return {
-    review: `${prefix}ReviewPage.html`,
+    review: `${prefix}ExplainPage.html`,
     main: `${prefix}MainPage.html`,
   };
 };
