@@ -26,7 +26,7 @@ function applyLevelBackground() {
 
 /* 문제 불러오기 */
 async function loadProblems() {
-  const res = await fetch('../assets/problem/problem.json');
+  const res = await fetch('../assets/quiz_problem/quiz_data.json');
   return await res.json();
 }
 
