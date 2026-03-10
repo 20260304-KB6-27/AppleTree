@@ -25,12 +25,19 @@ button {
     position: relative;
     width: 100%;
     min-height: 100vh;
-    background: url('../assets/image/bg-level1.png') center/cover no-repeat;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 24px;
+}
+
+.bg-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
 }
 
 .overlay {

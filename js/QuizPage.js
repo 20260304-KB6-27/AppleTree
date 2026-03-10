@@ -41,6 +41,18 @@ async function loadQuizData() {
     }
 }
 
+// 배경 설정
+function getLevel() {
+    return Number(localStorage.getItem('level'));
+}
+
+function setBackgroundByLevel() {
+    const level = getLevel() || 1;
+    const bg = document.getElementById('bgImage');
+
+    bg.src = `../assets/image/bg-level${level}.png`;
+}
+
 // 퀴즈 시작
 function initQuiz() {
     state.selectedQuestions = getRandomQuestions(
@@ -264,4 +276,5 @@ function finishQuiz() {
 elements.nextBtn.addEventListener('click', nextQuestion);
 elements.finishBtn.addEventListener('click', finishQuiz);
 
+setBackgroundByLevel();
 loadQuizData();
