@@ -71,8 +71,8 @@ function updateUI() {
     levelBtn.disabled = exp < expNeeded;
   }
 
-  bg.src = `/assets/image/bg-level${level}.png`;
-  character.src = `/assets/image/character-level${level}.png`;
+  bg.src = `../assets/image/bg-level${level}.png`;
+  character.src = `../assets/image/character-level${level}.png`;
 }
 
 /* ---------------------- */
