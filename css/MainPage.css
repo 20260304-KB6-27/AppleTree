@@ -1,0 +1,136 @@
+body {
+  margin: 0;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#container {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 0;
+  box-sizing: border-box;
+}
+
+/* 배경 */
+#bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  filter: blur(2px) brightness(0.9);
+}
+
+/* 상단 UI */
+#top-ui {
+  width: 80%;
+}
+
+#progress-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* progress */
+#progress-bar {
+  flex: 1;
+  height: 50px;
+  background: #eee;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+#progress {
+  height: 100%;
+  width: 0%;
+  background: #9cc44b;
+  border-radius: 10px;
+}
+
+#text-container {
+  width: 100%;
+  position: absolute;
+  top: 30%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+/* 현재 레벨 */
+#level-text {
+  font-weight: 700;
+  color: #483524;
+  font-size: 18px;
+}
+
+/* 현재 경험치 */
+#exp-text {
+  font-size: 18px;
+  font-weight: 700;
+  color: #483524;
+}
+
+/* level 버튼 */
+#levelBtn {
+  height: 50px;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 10px;
+  background: #f4de8d;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  color: #483524;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+#levelBtn:disabled {
+  background: #eee;
+  cursor: not-allowed;
+}
+
+#levelBtn:hover {
+  transform: scale(1.05);
+}
+
+/* 캐릭터 */
+#character-area {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#character {
+  width: 500px;
+}
+
+/* 시작 버튼 */
+#startBtn {
+  padding: 18px 100px;
+  border: none;
+  border-radius: 30px;
+  color: #483524;
+  font-size: 22px;
+  font-weight: 700;
+  background: #fde068;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+#startBtn:hover {
+  transform: scale(1.05);
+}
