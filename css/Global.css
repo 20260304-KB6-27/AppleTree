@@ -1,0 +1,13 @@
+@font-face {
+  font-family: 'mulmaru';
+  src: url('../assets/font/MulmaruMono.woff2') format('woff2');
+}
+
+html,
+body {
+  font-family: 'mulmaru', sans-serif;
+}
+
+button {
+  font-family: inherit;
+}
