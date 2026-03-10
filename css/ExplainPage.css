@@ -123,6 +123,9 @@ body {
   font-weight: bold;
 
   line-height: 1.6;
+
+  max-height: 200px;
+  overflow-y: auto;
 }
 
 /* 틀린 문제 동그라미 */
