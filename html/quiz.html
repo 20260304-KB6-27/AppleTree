@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>퀴즈 풀기</title>
+        <link rel="stylesheet" href="../css/quiz_style.css" />
+    </head>
+    <body>
+        <div class="quiz-page">
+            <div class="overlay"></div>
+
+            <header class="quiz-header">
+                <div class="timer" id="timer">01:00</div>
+            </header>
+
+            <main class="quiz-card">
+                <div class="question-box">
+                    <p class="question-number" id="questionNumber">Q. 1</p>
+                    <h2 class="question-text" id="questionText">문제 표시</h2>
+                </div>
+
+                <div class="answer-area" id="answerArea">
+                    <!-- 문제 보기 뜨는 부분 -->
+                </div>
+
+                <div class="progress" id="progressText">1 / 10</div>
+            </main>
+
+            <div class="bottom-area">
+                <button id="nextBtn" class="next-btn">다음으로</button>
+                <button id="finishBtn" class="finish-btn hidden">
+                    종료하기
+                </button>
+            </div>
+        </div>
+
+        <script src="../js/data.js"></script>
+        <script src="../js/quiz.js"></script>
+        <audio id="quizAudio" src="../assets/audio/timer.mp3"></audio>
+    </body>
+</html>
