@@ -20,7 +20,6 @@
 }
 
 body {
-  //TODO: 폰트 통합 필요
   font-family: 'Pretendard', 'Noto Sans KR', 'Apple SD Gothic Neo', sans-serif;
   color: var(--text-main);
   background-color: #ffeda0;
@@ -53,12 +52,6 @@ body {
   background: var(--tier-bg-image) center/cover no-repeat;
   filter: blur(6px);
   transform: scale(1.04);
-}
-
-.result-page::after {
-  z-index: 1;
-  background: rgb(255 255 255 / 35%);
-  backdrop-filter: blur(2px);
 }
 
 .result-card {
@@ -230,6 +223,13 @@ h1 {
 
 .btn:active {
   transform: translateY(0);
+}
+
+.btn.is-disabled {
+  opacity: 0.45;
+  pointer-events: none;
+  cursor: default;
+  box-shadow: none;
 }
 
 .btn.primary {
