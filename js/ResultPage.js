@@ -118,6 +118,9 @@ const parseWrongIds = (rawValue) => {
 const getStageName = (stage) =>
   GAME_BALANCE.stageNames[stage] ?? `${stage}단계`;
 
+const getRequiredExpForLevel = (level) =>
+  clamp(toNumber(GAME_BALANCE.expToNextStage[level], 0), 0, 9999);
+
 const getStageKey = (stage) => {
   if (stage === 1) return 'student';
   if (stage === 2) return 'staff';
@@ -262,14 +265,8 @@ const resolveResultData = () => {
     9999,
   );
 
-  const requiredExp = clamp(
-    toNumber(
-      readStorage(STORAGE_KEYS.requiredExp),
-      GAME_BALANCE.expToNextStage[level] ?? 0,
-    ),
-    0,
-    9999,
-  );
+  // Always derive threshold from current level to avoid stale localStorage data.
+  const requiredExp = getRequiredExpForLevel(level);
 
   const remainingExp =
     requiredExp > 0 ? clamp(requiredExp - currentExp, 0, requiredExp) : 0;
@@ -312,6 +309,7 @@ const persistResult = (result) => {
   writeStorage(STORAGE_KEYS.quizTotal, result.total);
   writeStorage(STORAGE_KEYS.totalQuestions, result.total);
   writeStorage(STORAGE_KEYS.earnedExp, result.earnedExp);
+  writeStorage(STORAGE_KEYS.requiredExp, result.requiredExp);
   writeStorage(STORAGE_KEYS.timeSpent, result.durationSeconds);
   writeStorage(STORAGE_KEYS.spentTime, result.durationSeconds);
 
@@ -421,7 +419,6 @@ const render = () => {
   const accuracyText = document.getElementById('accuracy-text');
   const scoreText = document.getElementById('score-text');
   const scoreMaxText = document.getElementById('score-max-text');
-  const correctText = document.getElementById('correct-text');
   const correctCount = document.getElementById('correct-count');
   const totalCount = document.getElementById('total-count');
   const expText = document.getElementById('exp-text');
@@ -437,11 +434,6 @@ const render = () => {
   if (correctCount) correctCount.textContent = String(result.correct);
   if (totalCount) totalCount.textContent = String(result.total);
 
-  // Backward compatibility for older markup that only has #correct-text.
-  if (correctText && !correctCount) {
-    correctText.textContent = `${result.correct} / ${result.total} 정답`;
-  }
-
   if (expText) expText.textContent = `+${result.earnedExp} EXP`;
 
   if (remainExpText) {
@@ -453,7 +445,7 @@ const render = () => {
     } else if (result.remainingExp === 0) {
       remainExpText.textContent = `${nextStageName}으로 승급 가능`;
     } else {
-      remainExpText.textContent = `다음 단계까지 앞으로 ${result.remainingExp} EXP`;
+      remainExpText.textContent = `앞으로 ${result.remainingExp} EXP`;
     }
   }
 
