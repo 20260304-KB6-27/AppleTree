@@ -12,7 +12,6 @@ const state = {
 };
 
 const elements = {
-    timer: document.getElementById('timer'),
     questionNumber: document.getElementById('questionNumber'),
     questionText: document.getElementById('questionText'),
     answerArea: document.getElementById('answerArea'),
@@ -21,6 +20,7 @@ const elements = {
     finishBtn: document.getElementById('finishBtn'),
     timerAudio: document.getElementById('quizAudio'),
     timerBar: document.getElementById('timerBar'),
+    timerLabel: document.getElementById('timerLabel'),
 };
 
 // 퀴즈 데이터 불러오기
@@ -230,10 +230,35 @@ function stopTimer() {
 function updateTimer() {
     const minutes = String(Math.floor(state.timeLeft / 60)).padStart(2, '0');
     const seconds = String(state.timeLeft % 60).padStart(2, '0');
-    elements.timer.textContent = `${minutes}:${seconds}`;
 
-    const percent = (state.timeLeft / QUIZ_TIME) * 100;
-    elements.timerBar.style.width = `${percent}%`;
+    if (elements.timerLabel) {
+        elements.timerLabel.textContent = `TIME ${minutes}:${seconds}`;
+    }
+
+    if (elements.timerBar) {
+        const percent = (state.timeLeft / QUIZ_TIME) * 100;
+        elements.timerBar.style.width = `${percent}%`;
+
+        if (percent > 50) {
+            elements.timerBar.style.background =
+                'linear-gradient(90deg, #ffe96a 0%, #ffd23f 45%, #ffb000 100%)';
+        } else if (percent > 20) {
+            elements.timerBar.style.background =
+                'linear-gradient(90deg, #ffd36a 0%, #ffb347 45%, #ff8f00 100%)';
+        } else {
+            elements.timerBar.style.background =
+                'linear-gradient(90deg, #ff7b7b 0%, #ff5252 45%, #e53935 100%)';
+        }
+
+        const timerFrame = elements.timerBar.parentElement;
+        if (timerFrame) {
+            if (percent <= 20) {
+                timerFrame.classList.add('danger');
+            } else {
+                timerFrame.classList.remove('danger');
+            }
+        }
+    }
 }
 
 // 정답 계산
